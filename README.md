@@ -1,4 +1,4 @@
-# Guy Solan
+# Education
 
 I am a student at the Dyson School of Design Engineering - Imperial College London.
 
