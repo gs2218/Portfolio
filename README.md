@@ -1,4 +1,6 @@
-# Education
+# Guy Solan
+
+## Education
 
 I attended the Royal Grammar School Guildford - leaving with 3 A* grades at A Level in Maths, Physics and Product Design.
 
