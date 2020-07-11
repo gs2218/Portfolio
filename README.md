@@ -1,6 +1,8 @@
 # Education
 
-I am a student at the Dyson School of Design Engineering - Imperial College London.
+I attended the Royal Grammar School Guildford - leaving with 3 A* grades at A Level in Maths, Physics and Product Design.
+
+Currently, I am a student at the Dyson School of Design Engineering - Imperial College London.
 
 ## Skills
 
