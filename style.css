@@ -4,15 +4,32 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'NexaBold';
+  src: url('NexaBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NexaLight';
+  src: url('NexaLight.eot');
+  src: url('NexaLight.eot?#iefix') format('embedded-opentype'),
+       url('NexaLight.svg#NexaLight') format('svg'),
+       url('NexaLight.ttf') format('truetype'),
+       url('NexaLight.woff') format('woff'),
+       url('NexaLight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
     --main-bg-color: rgb(253,253,253);
-    --main-font-color: #17181a;
-    --second-font-color: rgb(50, 50, 50);
+    --main-font-color: rgb(90,90,90);
+    --second-font-color: rgb(130, 130, 130);
 }
 
 body {
   background: var(--main-bg-color);
-  font-family: "Montserrat", sans-serif;
+  font-family: "NexaLight";
   overflow-x: hidden;
   position: relative;
 }
@@ -22,7 +39,7 @@ main {
 
 #logo {
   color: var(--main-font-color);
-  font-family: "Abril Fatface";
+  font-family: "NexaBold";
 }
 .nav-header {
   min-height: 10vh;
@@ -33,7 +50,7 @@ main {
   color: var(--main-font-color);
   width: 80%;
   margin: auto;
-  padding: 2rem 0rem;
+  padding-top: 3rem;
   z-index: 2;
   position: relative;
 }
@@ -91,8 +108,8 @@ main {
   color: rgb(167, 110, 231);
 }
 .hero-desc h2 {
-  font-family: "Abril Fatface";
-  font-size: 5rem;
+  font-family: "NexaBold";
+  font-size: 3.5rem;
 }
 .hero-desc p {
   padding: 3rem 0rem;
@@ -114,6 +131,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
+  padding-left: 10rem;
   width: 100%;
   height: 100%;
   background: var(--main-font-color);
@@ -171,11 +189,11 @@ main {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active {
-  background: rgb(86, 124, 228);
+  background: rgb(167, 110, 231);
   transform: scale(3);
 }
 .cursor.explore-active {
-  background: white;
+  background: var(--main-font-color);
   transform: scale(3);
 }
 .cursor-text {
@@ -183,6 +201,7 @@ main {
   top: 50%;
   left: 50%;
   font-size: 0.5rem;
+  color: var(--main-bg-color);
   transform: translate(-50%, -50%);
 }
 .title {
@@ -195,7 +214,7 @@ main {
   top: 0;
   left: 0;
   position: absolute;
-  mix-blend-mode: darken;
+  mix-blend-mode: screen;
   transform: translateY(100%);
 }
 .t-swipe1 {
