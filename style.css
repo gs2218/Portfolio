@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color: rgb(253,253,253);
+    --main-font-color: #17181a;
+    --second-font-color: rgb(50, 50, 50);
+}
+
 body {
-  background: #17181a;
+  background: var(--main-bg-color);
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -15,7 +21,7 @@ main {
 }
 
 #logo {
-  color: white;
+  color: var(--main-font-color);
   font-family: "Abril Fatface";
 }
 .nav-header {
@@ -24,7 +30,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: var(--main-font-color);
   width: 80%;
   margin: auto;
   padding: 2rem 0rem;
@@ -36,7 +42,7 @@ main {
   width: 3rem;
   height: 0.2rem;
   margin: 0.4rem;
-  background: white;
+  background: var(--main-font-color);
   pointer-events: none;
 }
 
@@ -47,8 +53,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background: #17181a;
+  color: var(--main-font-color);
+  background: var(--main-bg-color));
 }
 
 .hero-desc {
@@ -91,14 +97,14 @@ main {
 .hero-desc p {
   padding: 3rem 0rem;
   font-size: 1.5rem;
-  color: rgb(223, 223, 223);
+  color: var(--second-font-color);
 }
 .explore {
   padding: 1rem 2rem;
   background: none;
   border: none;
-  color: white;
-  border: 1px solid white;
+  color: var(--main-font-color);
+  border: 1px solid var(--main-font-color);
   font-size: 1rem;
   text-decoration: none;
   align-self: flex-start;
@@ -110,7 +116,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--main-font-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,6 +124,7 @@ main {
   opacity: 1;
   clip-path: circle(50px at 100% -10%);
   -webkit-clip-path: circle(50px at 100% -10%);
+  color: var(--main-bg-color);
 }
 .burger {
   cursor: pointer;
@@ -146,7 +153,7 @@ main {
   position: absolute;
   width: 100%;
   height: 150%;
-  background: #17181a;
+  background: var(--main-bg-color);
   left: 0;
   top: -15%;
 }
@@ -154,7 +161,7 @@ main {
 .cursor {
   width: 3rem;
   height: 3rem;
-  border: 2px solid white;
+  border: 2px solid var(--main-font-color);
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -218,7 +225,7 @@ body.hide {
   align-items: center;
   width: 70%;
   margin: auto;
-  color: white;
+  color: var(--main-font-color);
   margin-top: 5rem;
   flex-wrap: wrap;
   position: relative;
@@ -263,7 +270,7 @@ body.hide {
   position: absolute;
   left: 50%;
   bottom: 10%;
-  color: white;
+  color: var(--main-font-color);
   opacity: 0.2;
 }
 
