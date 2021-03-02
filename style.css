@@ -196,12 +196,12 @@ main {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active {
-  background: rgb(109, 58, 204);
-  transform: scale(3);
+  background: rgba(109, 58, 204, 0.603);
+  transform: scale(2.5);
 }
 .cursor.explore-active {
   background: var(--main-font-color);
-  transform: scale(3);
+  transform: scale(2.5);
 }
 .cursor-text {
   position: absolute;

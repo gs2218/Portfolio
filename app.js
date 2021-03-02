@@ -15,7 +15,7 @@ function animateSlides() {
     const revealImg = slide.querySelector(".reveal-img");
     const img = slide.querySelector("img");
     const revealText = slide.querySelector(".reveal-text");
-    const scrollPrompt = document.querySelector(".scroll-prompt");
+    const scrollPrompt = slide.querySelector(".scroll-prompt");
     //GSAP
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "power2.inOut" }
@@ -24,7 +24,7 @@ function animateSlides() {
     slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
     slideTl.fromTo(revealText, { x: "0%" }, { x: "100%" }, "-=0.75");
     slideTl.fromTo(scrollPrompt,{ opacity: 0, scale:1 }, { opacity: 1, scale:1 }, "+=2");
-    slideTl.to(scrollPrompt, {scale: 1.15, 
+    slideTl.to(scrollPrompt, {scale: 1.1, 
       repeat: -1,
       yoyo: true, 
       ease: "power"});
