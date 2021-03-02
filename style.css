@@ -11,14 +11,7 @@
 
 @font-face {
   font-family: 'NexaLight';
-  src: url('NexaLight.eot');
-  src: url('NexaLight.eot?#iefix') format('embedded-opentype'),
-       url('NexaLight.svg#NexaLight') format('svg'),
-       url('NexaLight.ttf') format('truetype'),
-       url('NexaLight.woff') format('woff'),
-       url('NexaLight.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  src:     url('NexaLight.ttf') format('truetype');
 }
 
 :root {
@@ -43,6 +36,7 @@ main {
 #logo {
   color: var(--main-font-color);
   font-family: "NexaBold";
+  text-decoration: none;
 }
 .nav-header {
   min-height: 10vh;
@@ -53,7 +47,8 @@ main {
   color: var(--main-font-color);
   width: 80%;
   margin: auto;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  transform: translateY(2rem);
   z-index: 2;
   position: relative;
 }
@@ -129,6 +124,15 @@ main {
   text-decoration: none;
   align-self: flex-start;
   cursor: pointer;
+}
+.scroll-prompt{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-40%);
+  bottom: 0;
+  padding-bottom: 3rem;
+
 }
 .nav-bar {
   position: fixed;
