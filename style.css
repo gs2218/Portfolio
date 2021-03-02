@@ -27,7 +27,7 @@
     --second-font-color: rgb(128, 128, 128);
     --purple-highlight-color: rgb(109, 58, 204);
     --orange-highlight-color: rgb(216, 79, 25);
-    --blue-highlight-color: rgb(104, 216, 224);
+    --blue-highlight-color: rgb(94, 204, 212);
 }
 
 body {
@@ -112,7 +112,7 @@ main {
 }
 .hero-desc h2 {
   font-family: "NexaBold";
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 .hero-desc p {
   padding: 3rem 0rem;
@@ -134,7 +134,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  padding-left: 10rem;
+  padding-left: 9rem;
   width: 100%;
   height: 100%;
   background: var(--main-font-color);
@@ -192,7 +192,7 @@ main {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active {
-  background: rgb(167, 110, 231);
+  background: rgb(109, 58, 204);
   transform: scale(3);
 }
 .cursor.explore-active {
@@ -217,17 +217,17 @@ main {
   top: 0;
   left: 0;
   position: absolute;
-  mix-blend-mode: darkem;
+  mix-blend-mode: darken;
   transform: translateY(100%);
 }
 .t-swipe1 {
-  background: rgb(86, 124, 228);
+  background: transparent);
 }
 .t-swipe2 {
-  background: rgb(167, 110, 231);
+  background: transparent;
 }
 .t-swipe3 {
-  background: rgb(255, 139, 93);
+  background: transparent;
 }
 
 .scrollmagic-pin-spacer {
