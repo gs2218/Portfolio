@@ -74,7 +74,7 @@ main {
   justify-content: space-between;
   align-items: center;
   color: var(--main-font-color);
-  background: var(--main-bg-color));
+  background: var(--main-bg-color);
 }
 
 .hero-desc {
@@ -221,7 +221,7 @@ main {
   transform: translateY(100%);
 }
 .t-swipe1 {
-  background: transparent);
+  background: transparent;
 }
 .t-swipe2 {
   background: transparent;
