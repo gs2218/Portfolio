@@ -1,17 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 @font-face {
   font-family: 'NexaBold';
-  src: url('NexaBold.ttf') format('truetype');
+  src: url('./fonts/NexaBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'NexaLight';
-  src:     url('NexaLight.ttf') format('truetype');
+  src:     url('./fonts/NexaLight.ttf') format('truetype');
 }
 
 :root {
@@ -21,6 +16,7 @@
     --purple-highlight-color: rgb(109, 58, 204);
     --orange-highlight-color: rgb(216, 79, 25);
     --blue-highlight-color: rgb(94, 204, 212);
+    --green-highlight-color: rgb(124, 212, 148);
 }
 
 body {
@@ -101,16 +97,18 @@ main {
 .mountain-span {
   color: var(--purple-highlight-color);
 }
-
 .hike-span {
   color: var(--orange-highlight-color);
+}
+.gizmo-span{
+  color: var(--green-highlight-color);
 }
 .hero-desc h2 {
   font-family: "NexaBold";
   font-size: 3rem;
 }
 .hero-desc p {
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
   font-size: 1.2rem;
   color: var(--second-font-color);
 }
@@ -138,7 +136,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  padding-left: 9rem;
+  padding-left: 2rem;
   width: 100%;
   height: 100%;
   background: var(--main-font-color);
@@ -156,13 +154,16 @@ main {
 }
 .nav-links {
   font-size: 3rem;
-  flex-basis: 30rem;
+  flex-basis: 0rem;
+  transform: translateY(5vh);
 }
 .nav-links h3 {
-  padding: 3rem 0rem;
+  padding: 1rem 0rem;
 }
 .contact {
   flex-basis: 30rem;
+  transform: translateY(3vh);
+
 }
 .contact h2 {
   font-size: 3rem;
@@ -343,10 +344,12 @@ body.hide {
     width: 100%;
     margin: 0;
   }
+
   .slide {
     display: block;
     width: 100%;
     text-align: center;
+    transform: translateY(-5vh)
   }
   .hero-desc {
     padding: 0;
@@ -359,14 +362,18 @@ body.hide {
     padding: 1rem 0rem;
   }
   .hero-desc p {
-    padding: 2rem 1rem;
+    padding: 0rem 0rem;
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+    transform: translateY(-5vh);
+
   }
   .explore {
     width: 60%;
     margin: auto;
+    transform: translateY(-2vh);
+
   }
   .detail-slide {
     width: 100%;
@@ -397,5 +404,8 @@ body.hide {
     font-size: 1.2rem;
     padding: 2rem;
     text-align: center;
+  }
+  .scroll-prompt{
+    font-size: 0;
   }
 }
