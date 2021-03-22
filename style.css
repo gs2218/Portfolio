@@ -103,9 +103,10 @@ main {
 .gizmo-span{
   color: var(--green-highlight-color);
 }
+
 .hero-desc h2 {
   font-family: "NexaBold";
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 .hero-desc p {
   padding: 2rem 0rem;
