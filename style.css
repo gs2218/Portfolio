@@ -129,7 +129,7 @@ main {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-40%);
-  bottom: 2rem;
+  bottom: 1rem;
   /* padding-bottom: 3rem; */
   z-index: 10;
 }
