@@ -9,7 +9,7 @@ function animateSlides() {
   //Select some things
   const sliders = document.querySelectorAll(".slide");
   const nav = document.querySelector(".nav-header");
-  
+
   //Loop over each sllide
   sliders.forEach((slide, index, slides) => {
     const revealImg = slide.querySelector(".reveal-img");
@@ -23,11 +23,13 @@ function animateSlides() {
     slideTl.fromTo(revealImg, { x: "0%" }, { x: "100%" });
     slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
     slideTl.fromTo(revealText, { x: "0%" }, { x: "100%" }, "-=0.75");
-    slideTl.fromTo(scrollPrompt,{ opacity: 0, scale:1 }, { opacity: 1, scale:1 }, "+=2");
-    slideTl.to(scrollPrompt, {scale: 1.1, 
+    slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
+    slideTl.to(scrollPrompt, {
+      scale: 1.1,
       repeat: -1,
-      yoyo: true, 
-      ease: "power"});
+      yoyo: true,
+      ease: "power"
+    });
     //Create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
@@ -47,7 +49,7 @@ function animateSlides() {
     pageTl.fromTo(nextSlide, { y: "0%" }, { y: "50%" });
     pageTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5 });
     pageTl.fromTo(nextSlide, { y: "50%" }, { y: "0%" }, "-=0.5");
- 
+
     // Create new scene
     pageScene = new ScrollMagic.Scene({
       triggerElement: slide,
@@ -92,16 +94,16 @@ function activeCursor(e) {
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
-    gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "white" });
-    gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "white" });
+    gsap.to(".line1", 0.5, { rotate: "45", y: 6, background: "white" });
+    gsap.to(".line2", 0.5, { rotate: "-45", y: -6, background: "white" });
     gsap.to("#logo", 1, { color: "white" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
-    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "rgb(110, 110, 110)" });
-    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "rgb(110, 110, 110)" });
-    gsap.to("#logo", 1, { color: "rgb(110, 110, 110)" });
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "rgb(5,5,5)" });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "rgb(5,5,5)" });
+    gsap.to("#logo", 1, { color: "rgb(5,5,5)" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
     document.body.classList.remove("hide");
   }
