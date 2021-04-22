@@ -94,8 +94,8 @@ function activeCursor(e) {
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
-    gsap.to(".line1", 0.5, { rotate: "45", y: 6, background: "white" });
-    gsap.to(".line2", 0.5, { rotate: "-45", y: -6, background: "white" });
+    gsap.to(".line1", 0.5, { rotate: "45", y: 7, background: "white" });
+    gsap.to(".line2", 0.5, { rotate: "-45", y: -7, background: "white" });
     gsap.to("#logo", 1, { color: "white" });
     gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
     document.body.classList.add("hide");
