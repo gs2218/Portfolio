@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludwig Ro Bothoven</title>
-</head>
-<body>
-    <img style="width:100%;" src="./LUDWIG RO BOTHOVEN - POSTER.jpg" alt="ludwig ro bothoven image" />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guy Solan</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body data-barba="wrapper">
+    <header class="nav-header">
+      <h1><a href="../index.html" class="white" id="logo">Guy Solan</a></h1>
+      <div class="burger">
+        <div class="line1-white"></div>
+        <div class="line2-white"></div>
+      </div>
+    </header>
+    <main data-barba="container" data-barba-namespace="fashion">
+    <img class="cover-photo" src="./images/IMG_6497.jpg" alt="Big Cover Photo">
+        <ul class="skills">
+            <h4>3D printing</h4>
+            <h4>LoFi Prototyping</h4>
+            <h4>Mechanism Design</h4>
+            <h4 class="green">C++</h4>
+            <h4>Premier Pro</h4>
+            </ul>
+    <section class="intro proj">
+
+            <div class="proj-title">
+                <h1>
+                    Ludwig<span class="gizmo-span"> Ro Bot</span>hoven.
+                  </h1>
+                  <!-- <img class="body-img" src="./images/IMG_6477.jpg" alt=""> -->
+            </div>
+            <div class="abstract">
+                <p>
+                    Tasked with creating an entertaining cardboard robot - I concieved 
+                    Ludwig Ro Bothoven. PS3 controllers connect via bluetooth to an ESP32 and an 
+                    Arduino Mega 2560. These move two robotic hands up and down the piano, play with their 8 
+                    hammers, and perform preprogrammed demos.
+                </p>
+            </div>
+       
+        </section>
+            <video class="vid" controls>
+        
+                <source src="/media/cc0-videos/flower.webm"
+                        type="video/webm">
+                <source src="./video/LUDWIG.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            
+            <img class="poster" src="./images/poster2.png" alt="Gizmo poster did not load.">
+    </main> 
+    <footer>
+      <h3>
+        <a class="footer-text" href="../index.html">More Projects</a>
+      </h3>
+    </footer>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <h3>Twitter</h3>
+        <h3>Youtube</h3>
+        <h3>Instragram</h3>
+      </ul>
+      <div class="contact">
+        <h2>Stay in touch.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem
+          praesentium ea amet error quidem natus. Magnam explicabo sed tenetur?
+        </p>
+      </div>
+    </nav>
+    <div class="cursor">
+      <span class="cursor-text"></span>
+    </div>
+    <div class="swipe swipe1"></div>
+    <div class="swipe swipe2"></div>
+    <div class="swipe swipe3"></div>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+      integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../app.js"></script>
+  </body>
 </html>

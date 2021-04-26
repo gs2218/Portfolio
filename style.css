@@ -1,14 +1,3 @@
-
-@font-face {
-  font-family: 'NexaBold';
-  src: url('./fonts/NexaBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'NexaLight';
-  src:     url('./fonts/NexaLight.ttf') format('truetype');
-}
-
 @font-face {
   font-family: 'RockSalt';
   src:     url('./fonts/rocksalt-regular-webfont.woff') format('truetype');
@@ -20,11 +9,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 :root {
     --main-bg-color: rgb(255, 255, 255);
     --main-font-color: rgb(5, 5, 5);
     --second-font-color: rgb(5, 5, 5);
-    --dark-green-color: rgb(32, 37, 34);
+    --dark-green-color: rgb(16, 95, 51);
     --about-bg-color: rgb(11, 12, 15);
     --purple-highlight-color: rgb(109, 58, 204);
     --orange-highlight-color: rgb(216, 79, 25);
@@ -34,7 +27,7 @@
 
 body {
   background: var(--main-bg-color);
-  font-family: "NexaLight";
+  font-family: "Raleway";
   overflow-x: hidden;
   position: relative;
 }
@@ -44,6 +37,14 @@ body {
   font-family: "RockSalt";
   text-decoration: none;
 }
+
+#logo.white {
+  color: var(--main-bg-color);
+  font-family: "RockSalt";
+  text-decoration: none;
+}
+
+
 .nav-header {
   min-height: 10vh;
   font-size: 1rem;
@@ -54,8 +55,8 @@ body {
   width: 90%;
   margin: auto;
   padding-top: 1rem;
-  /* padding-bottom: 1rem; */
-  transform: translateY(2rem);
+  padding-bottom: 1rem;
+  transform: translateY(1rem);
   z-index: 2;
   position: relative;
 }
@@ -68,7 +69,95 @@ body {
   pointer-events: none;
   -moz-border-radius: 1rem;
   border-radius: 1rem;
+}
+
+.line1-white, .line2-white{
+  background: var(--main-bg-color);
+  width: 3.5rem;
+  height: 0.2rem;
+  margin: 0.7rem;
+  pointer-events: none;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+
+.landing{
+  /* transform: translateY(2rem); */
+  min-height: 8n0vh;
+  margin: 0 auto 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-font-color);
+  background: var(--main-bg-color);
+}
+
+
+.landing-desc{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+  flex-basis: 40rem;
+  padding-left: 10rem;
+  position: relative;
+}
+
+.arrow-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  /* padding-bottom: 2rem; */
+  flex: 1;
+  flex-basis: 10rem;
+  padding-left: 3rem;
+  position: relative;
   
+}
+
+.arrow{
+  /* flex-basis: 10rem; */
+  height: 50%;
+}
+
+.arrow-text{
+  font-family: "RockSalt";
+  font-size: 1rem;
+  /* align-items: center;/ */
+  /* flex-direction: column; */
+}
+
+.landing h3{
+  font-family: "RockSalt";
+  font-size: 3.5rem;
+  line-height: 8rem;
+  display: flex;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  text-align: right;
+}
+
+.collab-button{
+  align-self: flex-end;
+  transform: translate(40%);
+
+}
+.collab-button text{
+  fill: var(--main-bg-color);
+
+}
+
+.collab-bubble{
+  width: 75%;
+}
+
+#collab{
+  display: flex;
+  transform: translateX(-20%);
 }
 
 .slide {
@@ -109,11 +198,14 @@ body {
   font-family: "RockSalt";
   font-size: 3rem;
   line-height: 4.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .hero-desc p {
   padding-top: 3rem;
   padding-bottom: 2rem;
   font-size: 1.1rem;
+  font-weight: 100;
   color: var(--second-font-color);
 }
 
@@ -136,16 +228,20 @@ body {
 }
 
 .explore {
-  padding: 1rem 2rem;
-  background: none;
-  border: none;
   color: var(--main-font-color);
-  border: 1px solid var(--main-font-color);
-  /* border-radius: 0.5rem; */
-  font-size: 1rem;
+  font-family: RockSalt;
   text-decoration: none;
-  align-self: flex-start;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-button{
+  align-self: flex-start;
+}
+
+.exp-bubble{
+  width: 55%;
 }
 
 .scroll-prompt{
@@ -224,8 +320,11 @@ body {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active {
-  background: var(--dark-green-color);
-  opacity: 0.5;
+  background: var(--orange-highlight-color);
+  transform: scale(2.5);
+}
+.cursor.footer-text-active {
+  background: var(--orange-highlight-color);
   transform: scale(2.5);
 }
 .cursor.explore-active {
@@ -243,7 +342,7 @@ body {
 
 .title {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .title-swipe {
@@ -254,16 +353,20 @@ body {
   position: absolute;
   mix-blend-mode: darken;
   transform: translateY(100%);
+  z-index: 0;
 }
-.t-swipe1 {
-  background: transparent;
+/* .achilles-swipe {
+  background: var(--purple-highlight-color);
 }
-.t-swipe2 {
-  background: transparent;
+.seat-swipe {
+  background: var(--orange-highlight-color);
 }
-.t-swipe3 {
-  background: transparent;
+.soap-swipe {
+  background: var(--blue-highlight-color);
 }
+.gizmo-swipe {
+  background: var(--green-highlight-color);
+} */
 
 .scrollmagic-pin-spacer {
   position: static !important;
@@ -274,6 +377,104 @@ body.hide {
 }
 
 /* Other Pages */
+.cover-photo{
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  margin: auto;
+  position: relative;
+  transform: translateY(-7rem); 
+}
+
+.intro.proj{
+  transform: translateY(-3rem);
+  margin: 0 auto 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  
+}
+
+.intro h1{
+  font-family: "RockSalt";
+  font-size: 5rem;
+  line-height: 7rem;
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+
+.abstract{
+  flex: 50%;
+  flex-direction: column;
+  padding-left: 12rem;
+  align-self: flex-end;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transform: translateY(-5rem);
+
+  font-family: RockSalt;
+}
+
+footer{
+  background: var(--main-font-color);
+  height: 38.2vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.footer-text{
+  font-family: RockSalt;
+  color: var(--main-bg-color);
+  margin: auto;
+  font-family: RockSalt;
+  font-size: 3rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  z-index: 1;
+}
+
+.vid{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.poster{
+  width: 75%;
+  margin: auto;
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.green{
+  color: var(--green-highlight-color);
+}
+
+.white{
+  color: white;
+}
+
 .fashion1,
 .fashion2,
 .fashion3 {
@@ -342,15 +543,15 @@ body.hide {
   transform: translateX(-100%);
 }
 .swipe1 {
-  background: rgb(167, 110, 231);
+  background: var(--orange-highlight-color);
   z-index: 5;
 }
 .swipe2 {
-  background: rgb(86, 124, 228);
+  background: var(--purple-highlight-color);
   z-index: 4;
 }
 .swipe3 {
-  background: rgb(255, 139, 93);
+  background: var(--blue-highlight-color);
   z-index: 3;
 }
 
@@ -396,18 +597,13 @@ body.hide {
   }
   .hero-desc p {
     padding: 0rem 0rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    /* line-height: rem; */
     text-align: center;
     transform: translateY(-5vh);
 
   }
-  .explore {
-    width: 60%;
-    margin: auto;
-    transform: translateY(-2vh);
-
-  }
+  
   .detail-slide {
     width: 100%;
     text-align: center;

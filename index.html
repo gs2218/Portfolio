@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guy Solan</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body data-barba="wrapper">
@@ -20,6 +17,31 @@
       </div>
     </header>
     <main data-barba="container" data-barba-namespace="home">
+    <section class="landing">
+      <div class = "arrow-desc">
+      <text class="arrow-text" text-anchor="start" x="-50" y="10">Explore my work</text>
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="40" height="130" viewBox="0 0 59.42 198.23">
+        <path d="M961.12,444q.14,47,0,95.81-.15,47.77-.56,93.78" transform="translate(-930.72 -441.03)" 
+        fill="none" stroke="#3a3a3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+        <path d="M933.72,593.66c12,19.89,22.33,42.33,26.58,42.59,4.89.31,14.59-21.53,26.84-40.82" transform="translate(-930.72 -441.03)" 
+        fill="none" stroke="#3a3a3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+      </svg>
+    </div>
+      <div class=landing-desc>
+      <h3>Designer , Engineer  
+         and Entrepreneur</h3> 
+        <div class="collab-button">
+          <svg class="collab-bubble" id="collab" xmlns="http://www.w3.org/2000/svg" width="60" height="24.96mm" viewBox="0 0 209.76 82.1">
+            <a href = "mailto: guy.solan@thetismedical.com">
+            <path class="explore" d="M517.54,300.12C474.53,297.8,412,319.64,412.68,345c.54,20.05,60.16,37.24,109.67,36,44.87-1.13,98.9-15,99.09-36,.22-25.54-62.13-42.8-103.9-44.87" 
+            transform="translate(-412.17 -299.45)" fill="rgb(216, 79, 25)" stroke="none" stroke-miterlimit="12"/>
+            <text class="explore" text-anchor="start" x="45" y="47">Collaborate</text>
+          </a>
+          </svg>
+          </div>
+        </div>
+      </section>
+    <div class="Mwrap">
       <section class="mountain slide">
         <div class="hero-img">
           <img src="./img/purp_yellow_bg_all_1.3 (256, 3840x2160).jpg" alt="forest image" />
@@ -30,14 +52,24 @@
             <h2>
               Achilles Rupture <span class="mountain-span">Night Splint.</span>
             </h2>
-            <div class="title-swipe t-swipe1"></div>
+            <div class="title-swipe achilles-swipe"></div>
           </div>
           <p>
             In October 2021, I incorporated Thetis Medical Ltd. 
             The Night Splint, scheduled for release in June 2021, is a
              patented technology which I designed and prototyped. 
           </p>
-          <a href="https://thetismedical.com/" class="explore mountain-exp">Explore</a>
+          <div  class="exp-button">
+            <svg class="exp-bubble" xmlns="http://www.w3.org/2000/svg" width="74mm" height="28.96mm" viewBox="0 0 209.76 82.1">
+              <a href="https://thetismedical.com/">
+              <path class="explore" d="M517.54,300.12C474.53,297.8,412,319.64,412.68,345c.54,20.05,60.16,37.24,109.67,36,44.87-1.13,98.9-15,99.09-36,.22-25.54-62.13-42.8-103.9-44.87" 
+              transform="translate(-412.17 -299.45)" fill="white" stroke="#1d1d1b" stroke-miterlimit="12"/>
+            </a>
+              <text class="explore mountain-exp" text-anchor="start" x="62" y="47">Explore</text>
+            </svg>
+            </div>
+
+         
           <div class="reveal-text"></div>
         </div>
         <!-- <div class="scroll-prompt">
@@ -49,14 +81,22 @@
         <div class="hero-desc" id="swap">
           <div class="title">
             <h2><span class="hike-span">Portable seating</span> for commuters.</h2>
-            <div class="title-swipe t-swipe2"></div>
+            <div class="title-swipe seat-swipe"></div>
           </div>
           <p>
             With such ebbs and flows in the railway commuters, passengers are frequently
             left without a seat on trains and at stations. This portable seat, which slots into 
             a briefcase or backpack, aims to solve this issue.
           </p>
-          <a class="explore hike-exp"><strike>Explore</strike></a>
+          <div  class="exp-button">
+            <svg class="exp-bubble" xmlns="http://www.w3.org/2000/svg" width="74mm" height="28.96mm" viewBox="0 0 209.76 82.1">
+              <a href="https://thetismedical.com/">
+              <path class="explore" d="M517.54,300.12C474.53,297.8,412,319.64,412.68,345c.54,20.05,60.16,37.24,109.67,36,44.87-1.13,98.9-15,99.09-36,.22-25.54-62.13-42.8-103.9-44.87" 
+              transform="translate(-412.17 -299.45)" fill="white" stroke="#1d1d1b" stroke-miterlimit="12"/>
+            </a>
+              <text class="explore mountain-exp" text-anchor="start" x="62" y="47">Explore</text>
+            </svg>
+            </div>
           <div class="reveal-text"></div>
         </div>
         <div class="hero-img">
@@ -77,13 +117,21 @@
             <h2>
               Circular design with<span class="fashion-span"> Soap Bros.</span>
             </h2>
-            <div class="title-swipe t-swipe3"></div>
+            <div class="title-swipe soap-swipe"></div>
           </div>
           <p>
             In 5 years, 2 in 3 people will live in water-stressed areas. By redefining the
             way people wash their hands, SOAPBROS reduces the water use per handwash by 65%.
           </p>
-          <a class="explore fashion-exp"><strike>Explore</strike></a>
+          <div  class="exp-button">
+            <svg class="exp-bubble" xmlns="http://www.w3.org/2000/svg" width="74mm" height="28.96mm" viewBox="0 0 209.76 82.1">
+              <a href="https://thetismedical.com/">
+              <path class="explore" d="M517.54,300.12C474.53,297.8,412,319.64,412.68,345c.54,20.05,60.16,37.24,109.67,36,44.87-1.13,98.9-15,99.09-36,.22-25.54-62.13-42.8-103.9-44.87" 
+              transform="translate(-412.17 -299.45)" fill="white" stroke="#1d1d1b" stroke-miterlimit="12"/>
+              <text class="explore mountain-exp" text-anchor="start" x="62" y="47">Explore</text>
+            </a>
+            </svg>
+            </div>
           <div class="reveal-text"></div>
         </div>
         <!-- <div class="scroll-prompt">
@@ -96,13 +144,21 @@
             <h2>
               Introducing: Ludwig<span class="gizmo-span"> Ro Bot</span>hoven.
             </h2>
-            <div class="title-swipe t-swipe3"></div>
+            <div class="title-swipe gimzo-swipe"></div>
           </div>
           <p>
             Tasked with creating an engaging physical interaction out of cardboard - I 
             created two mechanical hands to play the piano. A PS3 controller operates each.
           </p>
-          <a class="explore fashion-exp"><strike>Explore</strike></a>
+          <div  class="exp-button">
+            <svg class="exp-bubble" xmlns="http://www.w3.org/2000/svg" width="74mm" height="28.96mm" viewBox="0 0 209.76 82.1">
+              <a href="./gizmo/index.html">
+              <path class="explore" d="M517.54,300.12C474.53,297.8,412,319.64,412.68,345c.54,20.05,60.16,37.24,109.67,36,44.87-1.13,98.9-15,99.09-36,.22-25.54-62.13-42.8-103.9-44.87" 
+              transform="translate(-412.17 -299.45)" fill="white" stroke="#1d1d1b" stroke-miterlimit="12"/>
+              <text class="explore mountain-exp" text-anchor="start" x="62" y="47">Explore</text>
+            </a>
+            </svg>
+            </div>
           <div class="reveal-text"></div>
         </div>
         <div class="hero-img" >
@@ -111,12 +167,15 @@
         </div>
       </section>
     </main>
+  </div>
+  <br>
     <nav class="nav-bar">
       <ul class="nav-links">
         <h3>LinkedIn</h3>
         <h3>Youtube</h3>
         <h3>Instragram</h3>
       </ul>
+      <br>
       <div class="contact">
         <h2>About me.</h2>
         <p>
