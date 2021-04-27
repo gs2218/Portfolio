@@ -16,6 +16,9 @@ function animateSlides() {
     const img = slide.querySelector("img");
     const revealText = slide.querySelector(".reveal-text");
     const scrollPrompt = slide.querySelector(".scroll-prompt");
+    const title = slide.querySelector(".title");
+    console.log(title);
+    const para = slide.querySelector("p");
     //GSAP
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "power2.inOut" }
@@ -186,13 +189,13 @@ function detailAnimation() {
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });
-    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1");
+    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1.5");
     slideTl.fromTo(nextImg, { x: "50%" }, { x: "0%" });
     //Scene
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
       duration: "100%",
-      triggerHook: 0
+      triggerHook: 0.2
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
@@ -204,6 +207,9 @@ function detailAnimation() {
       .addTo(controller);
   });
 }
+
+
+
 //EventListeners
 burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
