@@ -3,6 +3,7 @@ let slideScene;
 let pageScene;
 let detailScene;
 
+
 function animateSlides() {
   //Init Controller
   controller = new ScrollMagic.Controller();
@@ -15,16 +16,15 @@ function animateSlides() {
     const revealImg = slide.querySelector(".reveal-img");
     const img = slide.querySelector("img");
     const revealText = slide.querySelector(".reveal-text");
-    const scrollPrompt = slide.querySelector(".scroll-prompt");
+    const scrollPrompt = slide.querySelector(".arrow-desc");
     const title = slide.querySelector(".title");
-    console.log(title);
     const para = slide.querySelector("p");
     //GSAP
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "power2.inOut" }
     });
     slideTl.fromTo(revealImg, { height: "80%", y: "0%" }, { height: "0%", y: "-100%" });
-    // slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
+    slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
     slideTl.fromTo(revealText, { height: "100%", y: "0%" }, { height: "0%", y: "-100%" }, "-=0.75");
     slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
     slideTl.to(scrollPrompt, {
