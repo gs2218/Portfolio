@@ -23,8 +23,8 @@ function animateSlides() {
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "power2.inOut" }
     });
-    slideTl.fromTo(revealImg, { height: "80%", y: "0%" }, { height: "0%", y: "-100%" });
-    slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
+    slideTl.fromTo(revealImg, { opacity: 0, height: "100%", y: "0%" }, { opacity: 0, height: "100%", y: "-100%" });
+    slideTl.fromTo(img, { opacity: 0, translateX: "-20%" }, { opacity: 1, translateX: "0%" }, "-=1");
     slideTl.fromTo(revealText, { height: "100%", y: "0%" }, { height: "0%", y: "-100%" }, "-=0.75");
     slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
     slideTl.to(scrollPrompt, {
