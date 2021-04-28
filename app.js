@@ -18,25 +18,33 @@ function animateSlides() {
     const revealText = slide.querySelector(".reveal-text");
     const scrollPrompt = slide.querySelector(".arrow-desc");
     const title = slide.querySelector(".title");
-    const para = slide.querySelector("p");
+    const heroDescP = slide.querySelector(".hero-desc p");
+    const exp = slide.querySelector("svg");
     //GSAP
     const slideTl = gsap.timeline({
-      defaults: { duration: 1, ease: "power2.inOut" }
+      defaults: { duration: 1, ease: "Power3.easeOut" }
     });
-    slideTl.fromTo(revealImg, { opacity: 0, height: "100%", y: "0%" }, { opacity: 0, height: "100%", y: "-100%" });
-    slideTl.fromTo(img, { opacity: 0, translateX: "-20%" }, { opacity: 1, translateX: "0%" }, "-=1");
-    slideTl.fromTo(revealText, { height: "100%", y: "0%" }, { height: "0%", y: "-100%" }, "-=0.75");
-    slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
-    slideTl.to(scrollPrompt, {
-      scale: 1.1,
-      repeat: -1,
-      yoyo: true,
-      ease: "power"
-    });
+    slideTl.fromTo(title, 0.4, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" });
+    slideTl.fromTo(heroDescP, 0.4, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.2);
+    slideTl.fromTo(img, 1.5, { width: "100%", translateY: "101%" }, { width: "100%", translateY: "0%" }, 0.2);
+
+    slideTl.fromTo(exp, 0.4, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.5);
+
+
+
+
+    // slideTl.fromTo(revealText, { height: "100%", x: "0%", width: "100%" }, { height: "100%", x: "-100%", width: "0%" }, "-1.5");
+    // slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
+    // slideTl.to(scrollPrompt, {
+    //   scale: 1.1,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   ease: "power"
+    // });
     //Create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
-      triggerHook: 0.5,
+      triggerHook: 0.7,
       reverse: false
     })
       .setTween(slideTl)
