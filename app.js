@@ -38,6 +38,7 @@ function animateSlides() {
     //   yoyo: true,
     //   ease: "power"
     // });
+
     //Create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
