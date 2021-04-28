@@ -525,7 +525,7 @@ footer{
 }
 
 .fashion1 h1 {
-  color: rgb(255, 139, 93);
+  color: var(--orange-highlight-color);
 }
 .fashion2 h1 {
   color:  rgb(255, 117, 93);
