@@ -7,13 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
   </head>
   <body data-barba="wrapper">
     <header class="nav-header">
       <h1><a href="./index.html" id="logo">Guy Solan</a></h1>
       <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
+        <div class="line1">
+          <svg version="1.1" class="line" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 100 20" style="enable-background:new 0 0 100 20;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:rgba(255, 255, 255, 0);stroke:#1D1D1B;stroke-width:8;stroke-linecap:round;stroke-miterlimit:20;}
+          </style>
+          <path class="line" class="st0" d="M4,10.38c30.67-0.25,62.87,0.18,92-0.76"/>
+          </svg>
+        </div>
+        <div class="line2">
+          <svg version="1.1" class="line" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 100 20" style="enable-background:new 0 0 100 20;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:rgba(255, 255, 255, 0);stroke:#1D1D1B;stroke-width:8;stroke-linecap:round;stroke-miterlimit:20;}
+        </style>
+        <path class="line" class="st0" d="M4,10.38c30.67-0.25,62.87,0.18,92-0.76"/>
+        </svg>
+        </div>
       </div>
     </header>
     <main data-barba="container" data-barba-namespace="home">
@@ -35,21 +55,30 @@
           </div>
           </div>
       <div class = "arrow-desc">
-      <text class="arrow-text" text-anchor="start" x="-50" y="10">Explore my work</text>
-      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="40" height="130" viewBox="0 0 59.42 198.23">
-        <path d="M961.12,444q.14,47,0,95.81-.15,47.77-.56,93.78" transform="translate(-930.72 -441.03)" 
-        fill="none" stroke="#3a3a3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
-        <path d="M933.72,593.66c12,19.89,22.33,42.33,26.58,42.59,4.89.31,14.59-21.53,26.84-40.82" transform="translate(-930.72 -441.03)" 
-        fill="none" stroke="#3a3a3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
-      </svg>
+        <a href="#down-here" class="arrow-button">
+      <text class="arrow-text explore" text-anchor="start" x="-50" y="10">Explore my work</text>
+      <svg class = "arrow explore" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 100 150" style="enable-background:new 0 0 100 150;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+        </style>
+        <g>
+          <path class="st0" d="M51.23,2.75c0.23,25.57,0.39,52.41,0.46,80.42c0.05,21.25,0.05,41.82,0,61.68"/>
+          <path class="st0" d="M26.07,112.5c10.61,16.02,20.36,34.68,25.35,34.75c4.56,0.07,14.14-17.86,22.5-33.32"/>
+        </g>
+        </svg>
+      </a>
     </div>
       </section>
     <div class="Mwrap">
-      <section class="mountain slide">
+      <div id="down-here"></div>
+
+      <section id="#achilles" class="mountain slide">
         <div class="hero-img">
           <img src="./img/purp_yellow_bg_all_1.3 (256, 3840x2160).jpg" alt="forest image" />
           <!-- <div class="reveal-img"></div> -->
         </div>
+
         <div class="hero-desc">
           <div class="title">
             <h2>
@@ -79,9 +108,13 @@
           <h4 >Scroll for more Projects</h4>
         </div> -->
       </section>
+      
       <section class="hike slide">
-     
-        <div class="hero-desc" id="swap">
+        <div class="hero-img">
+          <img src="./img/seat_and_bag.JPG" alt="hike image" />
+          <!-- <div class="reveal-img"></div> -->
+        </div>
+        <div class="hero-desc">
           <div class="title">
             <h2><span class="hike-span">Portable seating</span> for commuters</h2>
             <div class="title-swipe seat-swipe"></div>
@@ -102,10 +135,7 @@
             </div>
           <!-- <div class="reveal-text"></div> -->
         </div>
-        <div class="hero-img">
-          <img src="./img/seat_and_bag.JPG" alt="hike image" />
-          <!-- <div class="reveal-img"></div> -->
-        </div>
+       
         <!-- <div class="scroll-prompt">
           <h4 >Scroll for more Projects</h4>
         </div> -->
@@ -137,12 +167,17 @@
             </div>
           <!-- <div class="reveal-text"></div> -->
         </div>
+     
         <!-- <div class="scroll-prompt">
           <h4 >Scroll for more Projects</h4>
         </div> -->
       </section>
       <section class="gizmo slide">
-        <div class="hero-desc" id="swap">
+        <div class="hero-img" >
+          <img src="./img/GIZMO_TWO_ABOVE.jpg" alt="gizmo image" />
+          <!-- <div class="reveal-img"></div> -->
+        </div>
+        <div class="hero-desc">
           <div class="title">
             <h2>
               Introducing Ludwig<span class="gizmo-span"> Ro Bot</span>hoven
@@ -153,6 +188,7 @@
             Tasked with creating an engaging physical interaction out of cardboard - I 
             created two mechanical hands to play the piano. A PS3 controller operates each.
           </p>
+         
           <div  class="exp-button">
             <svg class="exp-bubble" xmlns="http://www.w3.org/2000/svg" width="74mm" height="28.96mm" viewBox="0 0 209.76 82.1">
               <a href="./gizmo/index.html">
@@ -164,28 +200,52 @@
             </div>
           <!-- <div class="reveal-text"></div> -->
         </div>
-        <div class="hero-img" >
-          <img src="./img/GIZMO_TWO_ABOVE.jpg" alt="gizmo image" />
-          <!-- <div class="reveal-img"></div> -->
-        </div>
+       
       </section>
     </div>
     </main>
   </div>
   <br>
     <nav class="nav-bar">
-      <ul class="nav-links">
-        <h3>LinkedIn</h3>
-        <h3>Youtube</h3>
-        <h3>Instragram</h3>
-      </ul>
+      <div class="me">
+        <img src="./img/Asset 1.png" alt="" class="me-img">
+      </div>
+      
+        <a href="./cv.jpg">
+        <div class="cv">
+        <img src="./svgs/CV.svg" alt="">
+        <h3>C V</h3>
+      </a>
+      </div>
+      <div class="email">
+        <a href="mailto:guy.solan@thetismedical.com">
+        <img class="email" src="./svgs/email.svg" alt="">
+        <h3>Email</h3>
+      </a>
+      </div>
+      <div class="github">
+        <a href="https://github.com/guysolan">
+        <img class="github" src="./svgs/github.svg" alt="">
+        <h3>GitHub</h3>
+      </a>
+      </div>
+      
       <br>
       <div class="contact">
-        <h2>About me.</h2>
         <p>
-          I am the proud CEO of Thetis Medical Ltd and a second year Design Engineering
-          student at the Dyson School of Design Engineering. Turning ideas into functional 
-          prototypes is what I do best.
+          Hiya, 
+        </p>
+        <br>
+        <p>
+          I am the proud founder of <a href="https://thetismedical.com">Thetis Medical Ltd</a> and a student of <a href="https://www.imperial.ac.uk/design-engineering/">Design Engineering</a>.
+        </p>
+        <br>
+        <p>
+          I love making things people can use and hate wasting time.  I also love skiing and correcting people’s grammar (sorry).
+        </p>
+        <br>
+        <p>
+          I am available for work from April - September 2022.
         </p>
       </div>
     </nav>
