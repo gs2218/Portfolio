@@ -204,14 +204,14 @@ function detailAnimation() {
     const slideTl = gsap.timeline({ defaults: { duration: 1 } });
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
     const nextImg = nextSlide.querySelector("img");
-    slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });
+    slideTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8 });
     slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1.5");
-    slideTl.fromTo(nextImg, { x: "50%" }, { x: "0%" });
+    slideTl.fromTo(nextImg, { scale: 0.7, x: "50%" }, { scale: 1, x: "0%" });
     //Scene
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
       duration: "100%",
-      triggerHook: 0.2
+      triggerHook: 0.15
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
@@ -223,6 +223,7 @@ function detailAnimation() {
       .addTo(controller);
   });
 }
+
 
 //EventListeners
 burger.addEventListener("click", navToggle);

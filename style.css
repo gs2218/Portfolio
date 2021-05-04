@@ -71,9 +71,11 @@ body {
   stroke-width: 0.3rem;
   stroke-linecap: round;
   pointer-events: none;
- 
 }
 
+.line.white{
+  stroke: white;
+}
 
 .line1,
 .line2 {
@@ -82,16 +84,6 @@ body {
   pointer-events: none;
 }
 
-
-.line1-white, .line2-white{
-  background: var(--main-bg-color);
-  width: 3.5rem;
-  height: 0.2rem;
-  margin: 0.7rem;
-  pointer-events: none;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
-}
 
 .landing{
   /* transform: translateY(2rem); */
@@ -250,14 +242,30 @@ body {
   width: 55%;
 }
 
-/* .scroll-prompt{
+.cya-bg {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-40%);
-  bottom: 1rem;
-  z-index: 10;
-} */
+  width: 100%;
+  height: 5rem;
+  bottom: 2rem;
+  left: 0;
+  background: var(--main-font-color);
+}
+
+.cya{
+  color: var(--main-bg-color);
+  position: absolute;
+  display: flex;
+  max-height: 1rem;
+  width: 90%;
+  bottom: 3rem;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.cya-email{
+  cursor: pointer;
+}
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -480,23 +488,28 @@ body.hide {
 }
 
 .proj-title{
+  display: flex;
   flex: 40%;
   flex-direction: column;
-  flex: 1;
   font-family: "RockSalt";
   font-size: 3rem;
   line-height: 7rem;
   display: flex;
-  width: 40%;
+  width: 50%;
   flex-direction: column;
   padding-left: 2rem;
 }
 
 .proj-desc{
-  width: 50%;
   display: flex;
+  flex: 40%;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.proj-title.seat{
+  max-height: 30vw;
+  width: 80%;
 }
 
 .date{
@@ -513,6 +526,42 @@ body.hide {
   vertical-align: bottom;
   align-self: flex-end;
 }
+
+.date.seat{
+  padding-top: 0;
+  padding-bottom: 1rem;
+  align-self: flex-start;
+}
+.abstract.seat{
+  padding-left: 2rem;
+  text-align: left;
+  width: 80%;
+}
+
+
+.intro-text{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60rem;
+  padding-right: 5rem;
+  justify-content: space-between;
+}
+
+.intro-seat{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intro-img{
+  display: flex;
+  justify-content: right;
+  height: 90vh;
+  max-width: 25vw;
+  object-fit: cover;
+  align-items: right;
+}
+
 
 .skills-bg{
   width:100%;
@@ -556,7 +605,7 @@ footer{
   width: 90%;
   margin: auto;
   display: flex;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
@@ -594,57 +643,48 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 75%;
   margin: auto;
   color: var(--main-font-color);
-  margin-top: 3rem;
   flex-wrap: wrap;
   position: relative;
 }
 .fashion-img {
-  height: 80vh;
-  flex-basis: 30rem;
+  height: 85vh;
+  flex-basis: 35rem;
 }
-.fashion-text {
-  flex: 1;
-  position: relative;
-  flex-basis: 25rem;
-}
+
 .fashion-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 10rem;
+  padding-right: 1rem;
+}
+
 .fashion-text h1 {
-  font-size: 6rem;
   padding: 5rem 0rem;
   font-family: "RockSalt";
 }
 
-.fashion1 h1 {
-  color: var(--orange-highlight-color);
-}
-.fashion2 h1 {
-  color:  var(--blue-highlight-color);
-}
-.fashion3 h1 {
-  color:  rgb(255, 171, 93);
-}
-
 
 .fashion-text p {
-  font-size: 2rem;
   padding: 2rem 2rem 0rem 0rem;
   margin-bottom: 10rem;
 }
 .fashion-nr {
-  font-size: 8rem;
+  font-size: 6rem;
   font-family: "RockSalt";
   position: absolute;
-  left: 50%;
-  bottom: 10%;
-  color: var(--main-font-color);
+  left: 40%;
+  bottom: 20%;
+  color: var(--orange-highlight-color);
   opacity: 0;
 }
 
@@ -669,6 +709,44 @@ footer{
   z-index: 3;
 }
 
+.making-process{
+  transform: translateY(-5rem)
+}
+
+.making-process img{
+  width: 90%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin: auto;
+  display: flex;
+  align-self: center;
+}
+
+.making-process h2{
+  font-family: RockSalt;
+  font-size: 2rem;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  /* padding: 2rem; */
+}
+
+.disclaimer{
+  font-size: 1.3rem;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  margin: auto;
+  padding: 1rem;
+}
+
+.disclaimer p{
+  display: flex;
+  align-self: right;
+  text-align: right;
+}
+
 @media screen and (max-width: 1500px) {
   .hero-img {
     height: 70vh;
@@ -681,14 +759,15 @@ footer{
   }
 
   .fashion-text h1 {
-    font-size: 2rem;
-    padding: 1rem 0rem;
+    font-size: 2.2rem;
+    padding: 0rem 0rem;
+    padding-right: 1rem;
   }
   .fashion-text p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .fashion-img img {
-    height: 50vh;
+    height: 65vh;
     object-position: top;
   }
 }
@@ -756,7 +835,7 @@ footer{
   }
   .hero-desc {
     padding: 1rem 0rem;
-    
+
   }
   .hero-img {
     padding-top: 2rem;
@@ -806,6 +885,7 @@ footer{
     line-height: 14vw;
     text-align: center;
   }
+
 
   .cover-photo{
     width: 100%;
