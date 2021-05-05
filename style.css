@@ -86,7 +86,6 @@ body {
 
 
 .landing{
-  /* transform: translateY(2rem); */
   min-height: 86vh;
   margin: 0 auto 0 auto;
   width: 90%;
@@ -103,9 +102,7 @@ body {
 .landing h3{
   font-family: "RockSalt";
   font-size: 5rem;
-  line-height: 6rem;
   display: flex;
-  padding-top:  5rem;
   text-align: center;
   justify-content: center;
 }
@@ -118,6 +115,25 @@ body {
   width: 100%;
   justify-content: flex-end;
   transform: translateY(2rem);
+}
+
+.about-me{
+  display: flex;
+  width: 10rem;
+  flex-direction: row;
+  margin: 2rem;
+  align-self: flex-end;
+  max-height: 4vh;
+  transform: translateY(-2.5rem);
+}
+
+.about-me-arrow{
+  width: 40%;
+}
+
+.about-me-text{
+  width: 60%;
+  padding-top: 2rem;
 }
 
 .arrow-button{
@@ -148,6 +164,9 @@ body {
   color: var(--main-font-color)
 }
 
+.collab-button{
+  transform: translateY(-2rem);
+}
 
 .collab-button text{
   fill: var(--main-bg-color);
@@ -753,9 +772,16 @@ footer{
   }
   
   .landing h3{
-    padding-top: 15vh;
+    padding-top: 6vh;
     font-size: 3;
-    line-height: 5vw;
+  }
+
+  .title-top{
+    line-height: 1vw;
+  }
+
+  .title-bottom{
+    line-height: 14vw;
   }
 
   .fashion-text h1 {
