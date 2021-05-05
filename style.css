@@ -133,7 +133,8 @@ body {
 
 .about-me-text{
   width: 60%;
-  padding-top: 2rem;
+  padding-top: 2.1rem;
+  font-family: RockSalt;
 }
 
 .arrow-button{
