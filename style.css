@@ -826,17 +826,29 @@ footer{
     pointer-events: none;
   }
 
+  .landing{
+    min-height: 90vh;
+  }
+
   .landing-desc{
     justify-content: center;
     align-items: center;
   }
 
   .landing h3{
-    padding-top: 15vh;
+    padding-top: 10vh;
     padding-left: 3rem;
     padding-right: 3rem;
     font-size: 8vw;
-    line-height: 5vw;
+    line-height: 4vw;
+  }
+
+  .about-me{
+    transform: translate(1.5rem, -2.5rem);
+  }
+  
+  .collab-button{
+    padding-top: 1rem;
   }
   .collab-bubble{
     transform: scale(0.6);
@@ -847,7 +859,7 @@ footer{
   }
 
   .arrow-desc{
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
 
   .arrow-desc text{
@@ -894,6 +906,22 @@ footer{
   .exp-bubble{
     width: 40vw;
     align-self: center;
+  }
+
+  .cya-bg {
+    height: 5rem;
+    bottom: 0;
+    transform: translateY(4rem);
+  }
+  
+  .cya{
+    flex-direction: column;
+    bottom: 3.5rem;
+    font-size: 1rem;
+  }
+  
+  .cya-email{
+    padding-top: 0.5rem;
   }
 
   .intro{

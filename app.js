@@ -86,7 +86,7 @@ function activeCursor(e) {
   const item = e.target;
   if (window.innerWidth > 1024) {
     if (item.id === "logo" || item.classList.contains("burger") ||
-      item.classList.contains("footer-text")) {
+      item.classList.contains("footer-text") || item.classList.contains("cya-email")) {
       mouse.classList.add("nav-active");
     } else {
       mouse.classList.remove("nav-active");
