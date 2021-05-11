@@ -10,8 +10,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  /* scroll-behavior: smooth; */
+  /* scroll-snap-type: y mandatory; */
 }
 
 :root {
@@ -31,8 +31,8 @@ body {
   font-family: "Raleway";
   overflow-x: hidden;
   position: relative;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
 }
 
 #logo {
@@ -95,7 +95,7 @@ body {
   align-items: center;
   color: var(--main-font-color);
   background: var(--main-bg-color);
-  scroll-snap-align: end;
+  /* scroll-snap-align: end; */
 }
 
 
@@ -178,7 +178,7 @@ body {
 }
 
 .slide {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   min-height: 100vh;
   margin: 0 auto 0 auto;
   width: 90%;
@@ -806,7 +806,7 @@ footer{
     width: 100%;
     overflow-x: hidden;
     margin: 0;
-    scroll-snap-type: none;
+    /* scroll-snap-type: none; */
   }
 
   .line{
