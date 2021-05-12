@@ -82,6 +82,7 @@ function cursor(e) {
   mouse.style.top = e.pageY + "px";
   mouse.style.left = e.pageX + "px";
 }
+
 function activeCursor(e) {
   const item = e.target;
   if (window.innerWidth > 1024) {
@@ -102,6 +103,7 @@ function activeCursor(e) {
     }
   }
 }
+
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");

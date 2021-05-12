@@ -10,7 +10,7 @@
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   /* scroll-snap-type: y mandatory; */
 }
 
@@ -86,7 +86,7 @@ body {
 
 
 .landing{
-  min-height: 86vh;
+  min-height: 80vh;
   margin: 0 auto 0 auto;
   width: 90%;
   display: flex;
