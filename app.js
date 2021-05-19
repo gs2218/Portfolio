@@ -25,7 +25,6 @@ function animateSlides() {
     slideTl.fromTo(title, 0.6, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.2);
     slideTl.fromTo(heroDescP, 0.8, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.4);
     slideTl.fromTo(exp, 1, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.6);
-    slideTl.fromTo(skillsBG, 2, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.6);
 
 
     //Create Scene
