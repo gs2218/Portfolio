@@ -13,14 +13,10 @@ function animateSlides() {
 
   //Loop over each slide
   sliders.forEach((slide, index, slides) => {
-    const revealImg = slide.querySelector(".reveal-img");
     const img = slide.querySelector("img");
-    const revealText = slide.querySelector(".reveal-text");
-    const scrollPrompt = slide.querySelector(".arrow-desc");
     const title = slide.querySelector(".title");
     const heroDescP = slide.querySelector(".hero-desc p");
     const exp = slide.querySelector("svg");
-
     //GSAP
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "Power3.easeOut" }
@@ -29,14 +25,8 @@ function animateSlides() {
     slideTl.fromTo(title, 0.6, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.2);
     slideTl.fromTo(heroDescP, 0.8, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.4);
     slideTl.fromTo(exp, 1, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.6);
-    // slideTl.fromTo(revealText, { height: "100%", x: "0%", width: "100%" }, { height: "100%", x: "-100%", width: "0%" }, "-1.5");
-    // slideTl.fromTo(scrollPrompt, { opacity: 0, scale: 1 }, { opacity: 1, scale: 1 }, "+=2");
-    // slideTl.to(scrollPrompt, {
-    //   scale: 1.1,
-    //   repeat: -1,
-    //   yoyo: true,
-    //   ease: "power"
-    // });
+    slideTl.fromTo(skillsBG, 2, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.6);
+
 
     //Create Scene
     slideScene = new ScrollMagic.Scene({
@@ -54,10 +44,6 @@ function animateSlides() {
     //New ANimation
     const pageTl = gsap.timeline();
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
-    // pageTl.fromTo(nextSlide, { y: "0%" }, { y: "50%" });
-    // pageTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5 });
-    // pageTl.fromTo(nextSlide, { y: "50%" }, { y: "0%" }, "-=0.5");
-
     // Create new scene
     pageScene = new ScrollMagic.Scene({
       triggerElement: slide,
@@ -70,11 +56,11 @@ function animateSlides() {
       // name: "page",
       // indent: 200
       // })
-      // .setPin(slide, { pushFollowers: false })
       .setTween(pageTl)
       .addTo(controller);
   });
 }
+
 const mouse = document.querySelector(".cursor");
 const mouseTxt = mouse.querySelector("span");
 const burger = document.querySelector(".burger");
@@ -208,14 +194,14 @@ function detailAnimation() {
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8 });
     slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1.5");
-    slideTl.fromTo(nextImg, { scale: 0.7, x: "50%" }, { scale: 1, x: "0%" });
+    slideTl.fromTo(nextImg, { scale: 0.9, x: "6%" }, { scale: 1, x: "0%" });
     //Scene
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
       duration: "100%",
-      triggerHook: 0.15
+      triggerHook: 0.4
     })
-      .setPin(slide, { pushFollowers: false })
+      // .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
       // .addIndicators({
       //   colorStart: "white",
@@ -225,7 +211,6 @@ function detailAnimation() {
       .addTo(controller);
   });
 }
-
 
 //EventListeners
 burger.addEventListener("click", navToggle);
