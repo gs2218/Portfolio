@@ -31,7 +31,7 @@ function animateSlides() {
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
       triggerHook: 0.7,
-      reverse: false
+      // reverse: false
     })
       .setTween(slideTl)
       // .addIndicators({
@@ -198,7 +198,7 @@ function detailAnimation() {
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
       duration: "100%",
-      triggerHook: 0.4
+      triggerHook: 0.3
     })
       // .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
