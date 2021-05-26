@@ -72,7 +72,8 @@ function activeCursor(e) {
   const item = e.target;
   if (window.innerWidth > 1024) {
     if (item.id === "logo" || item.classList.contains("burger") ||
-      item.classList.contains("footer-text") || item.classList.contains("cya-email")) {
+      item.classList.contains("footer-text") || item.classList.contains("cya-email")
+      || item.classList.contains("skill")) {
       mouse.classList.add("nav-active");
     } else {
       mouse.classList.remove("nav-active");
@@ -86,6 +87,13 @@ function activeCursor(e) {
       mouseTxt.innerText = "";
       gsap.to(".title-swipe", 1, { y: "100%" });
     }
+    // if (item.classList.contains("skill")) {
+    //   mouse.classList.add("skill-active");
+    //   gsap.to(".title-swipe", 1, { y: "0%" });
+    //   mouseTxt.innerText = "Tap";
+    // } else {
+    //   mouse.classList.remove("skill-active");
+    // }
   }
 }
 
@@ -192,13 +200,13 @@ function detailAnimation() {
     let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8 });
-    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1.5");
-    slideTl.fromTo(nextImg, { scale: 0.9, x: "6%" }, { scale: 1, x: "0%" });
+    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=2");
+    slideTl.fromTo(nextImg, { scale: 0.98, x: "6%" }, { scale: 1, x: "0%" });
     //Scene
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
       duration: "100%",
-      triggerHook: 0.3
+      triggerHook: 0.4
     })
       // .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)

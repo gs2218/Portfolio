@@ -1,0 +1,30 @@
+Initial Feedback from Puja:
+
+- Clearly has a very personal style which is always nice to see. 
+- Your home page is very clean which is great. 
+
+Just a few minor points:
+- The top bar with the logo and about me icon is cut off at the top
+- One addition you could make to each project preview block on the home 
+page could be to add tags to give an idea of what the project involved 
+before clicking on it. This will help employers to find relevant content 
+for the job you have applied for. *
+- In project pages, include your key learnings from the project and maybe 
+also what you plan to do to take it further. Listing soft skills is also 
+quite important. *
+- There are two spelling mistakes on the portable seat page. Passengers and 
+Frequently - both in the first para i think
+- There's potentially too much animation on the portable seat page which makes
+ it difficult to focus on the information. I would make it more subtle.
+
+Other than that it looks great, well done!
+
+Feedback from Freya:
+- Title of project pages next to words means you need to read too much. Maybe add
+a picture to make it more visual or spread it out.
+
+Feedback from Chris:
+- The 'skills' bars should be clickable.
+- The pictures on the home page should be clickable.
+- The poster on the Gizmo page should be clickable.
+- Needs to be responsive for the bigger screen.
