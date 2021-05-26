@@ -195,28 +195,30 @@ barba.init({
 function detailAnimation() {
   controller = new ScrollMagic.Controller();
   const slides = document.querySelectorAll(".detail-slide");
-  slides.forEach((slide, index, slides) => {
-    const slideTl = gsap.timeline({ defaults: { duration: 1 } });
-    let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
-    const nextImg = nextSlide.querySelector("img");
-    slideTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8 });
-    slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=2");
-    slideTl.fromTo(nextImg, { scale: 0.98, x: "10%" }, { scale: 1, x: "0%" });
-    //Scene
-    detailScene = new ScrollMagic.Scene({
-      triggerElement: slide,
-      duration: "100%",
-      triggerHook: 0.4
-    })
-      // .setPin(slide, { pushFollowers: false })
-      .setTween(slideTl)
-      // .addIndicators({
-      //   colorStart: "white",
-      //   colorTrigger: "white",
-      //   name: "detailScene"
-      // })
-      .addTo(controller);
-  });
+  if (window.innerWidth > 1024) {
+    slides.forEach((slide, index, slides) => {
+      const slideTl = gsap.timeline({ defaults: { duration: 1 } });
+      let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
+      const nextImg = nextSlide.querySelector("img");
+      slideTl.fromTo(slide, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8 });
+      slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=2");
+      slideTl.fromTo(nextImg, { scale: 0.98, x: "10%" }, { scale: 1, x: "0%" });
+      //Scene
+      detailScene = new ScrollMagic.Scene({
+        triggerElement: slide,
+        duration: "100%",
+        triggerHook: 0.4
+      })
+        // .setPin(slide, { pushFollowers: false })
+        .setTween(slideTl)
+        // .addIndicators({
+        //   colorStart: "white",
+        //   colorTrigger: "white",
+        //   name: "detailScene"
+        // })
+        .addTo(controller);
+    });
+  }
 }
 
 //EventListeners

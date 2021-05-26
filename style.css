@@ -721,7 +721,7 @@ footer{
 }
 
 .fashion-text p {
-  padding: 2rem 2rem 0rem 0rem;
+  padding: 2rem 0rem;
   margin-bottom: 10rem;
 }
 
@@ -750,7 +750,7 @@ footer{
   transform: translateY(-5rem)
 }
 
-.making-process img{
+/* .making-process img{
   width: 90%;
   padding-right: 2rem;
   padding-left: 2rem;
@@ -765,8 +765,8 @@ footer{
   padding-left: 4rem;
   padding-top: 3rem;
   padding-bottom: 1rem;
-  /* padding: 2rem; */
-}
+  padding: 2rem;
+} */
 
 .disclaimer{
   font-size: 1.3rem;
@@ -805,12 +805,14 @@ footer{
 
   .fashion-text h1 {
     font-size: 2.2rem;
+
     padding: 0rem 0rem;
     padding-right: 1rem;
   }
   .fashion-text p {
     font-size: 1.3rem;
   }
+  
   .fashion-img img {
     height: 65vh;
     object-position: top;
@@ -952,30 +954,80 @@ footer{
     justify-content: center;
 
   }
-
   .proj-title{
-    font-size: 8vw;
-    line-height: 14vw;
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  }
+  .proj-title h1{
+    font-size: 2rem;
+    line-height: 4rem;
+    padding: 1rem 1rem;
     text-align: center;
   }
 
+  .date h4{
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+
+  .abstract{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+
+  .skills{
+    flex-direction: column;
+    text-align: center;
+  }
 
   .cover-photo{
     width: 100%;
     height: 100%;
     position: relative;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    transform: translateY(0);
   }
   
   .detail-slide {
     width: 100%;
     text-align: center;
   }
+
+  .fashion-text{
+    /* max-height: 40vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
   .fashion-text p {
-    margin-bottom: 5rem;
-    padding: 0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    padding: 0 3rem;
+    vertical-align: middle;
   }
   .fashion-text h1 {
-    margin: 2rem 0rem;
+    font-size: 1.25rem;
+    margin: 1rem 0rem;
+  }
+  .fashion-img{
+    max-width: 100%;
+    max-height: 40vh;
+  }
+  .fashion-img img{
+    max-width: 90%;
+    height: 100%;
+    min-width: 0%;
+    object-fit: contain;
+    overflow-y: hidden;
+    margin: auto;
+    position: relative;
   }
 
   .nav-bar {
@@ -1075,85 +1127,3 @@ footer{
     max-width: 50%;
   }
 }
-
-/* ANIMATION */
-
-
-#loader{
-  width: 60%;
-}
-
-#loader:hover .l1{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards;
-}
-
-#loader:hover .l2{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 0.2s;
-}
-
-#loader:hover .l3{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 0.4s;
-
-}
-
-#loader:hover .l4{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 0.6s;
-}
-
-#loader:hover .l5{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 0.8s;
-}
-
-#loader:hover .l6{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 1s;
-}
-
-#loader:hover .l7{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 1.125s;
-}
-
-#loader:hover .l8{
-  opacity: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: line-anim 2s ease forwards 1.25s;
-}
-
-
-@keyframes line-anim{
-  0%{
-      fill: none
-  }
-  to{
-      stroke-dashoffset:0;
-      
-  }
-  90%{
-      fill: none;
-  }
-  100%{
-      fill: #000000;
-  }
-}
-
