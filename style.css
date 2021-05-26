@@ -595,11 +595,10 @@ body.hide {
 
 .skills{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 90%;
   margin: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
   font-family: RockSalt;
   color: var(--main-bg-color);
 }
@@ -609,11 +608,16 @@ body.hide {
   color: var(--main-bg-color);
 }
 
+.skill{
+  padding: 0.5rem 2rem;
+}
+
 #skill1,
 #skill2,
 #skill3,
 #skill4,
-#skill5
+#skill5,
+#skill6
 {
   max-height: 0;
   transform: translateY(-16vh);
@@ -668,6 +672,10 @@ footer{
   color: var(--orange-highlight-color);
 }
 
+.purple{
+  color: var(--purple-highlight-color);
+}
+
 .white{
   color: white;
 }
@@ -691,20 +699,19 @@ footer{
 }
 .fashion-img {
   height: 85vh;
-  flex-basis: 35rem;
+  flex-basis: 30rem;
 }
 
 .fashion-img img {
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
 .fashion-text {
+  flex-basis: 5rem;
   flex: 1;
   position: relative;
-  flex-basis: 10rem;
   padding-right: 1rem;
 }
 
@@ -713,19 +720,9 @@ footer{
   font-family: "RockSalt";
 }
 
-
 .fashion-text p {
   padding: 2rem 2rem 0rem 0rem;
   margin-bottom: 10rem;
-}
-.fashion-nr {
-  font-size: 6rem;
-  font-family: "RockSalt";
-  position: absolute;
-  left: 40%;
-  bottom: 20%;
-  color: var(--orange-highlight-color);
-  opacity: 0;
 }
 
 .swipe {
@@ -977,12 +974,10 @@ footer{
     margin-bottom: 5rem;
     padding: 0;
   }
-  .fastion-text h1 {
+  .fashion-text h1 {
     margin: 2rem 0rem;
   }
-  .fashion-nr {
-    font-size: 8rem;
-  }
+
   .nav-bar {
     display: flex;
     width: 100%;
