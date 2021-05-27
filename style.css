@@ -636,8 +636,8 @@ footer{
 .fashion3 {
   min-height: 70vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: start;
   width: 75%;
   margin: auto;
   color: var(--main-font-color);
@@ -660,16 +660,16 @@ footer{
   flex: 1;
   position: relative;
   padding-right: 1rem;
+  justify-content: flex-end;
 }
 
 .fashion-text h1 {
-  padding: 5rem 0rem;
+  padding-top: 5rem;
   font-family: "RockSalt";
 }
 
 .fashion-text p {
   padding: 2rem 0rem;
-  margin-bottom: 10rem;
 }
 
 .swipe {
@@ -732,6 +732,92 @@ footer{
   text-align: right;
 }
 
+@media screen and (min-width: 1500px){
+  .slide {
+    width: 80%;
+  }
+  
+  .hero-desc {
+    flex-basis: 5rem;
+    padding-left: 5rem;
+  }
+  .hero-img {
+    flex-basis: 40rem;
+  }
+  
+  .hero-desc h2 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+  .hero-desc p {
+    font-size: 1.3rem;
+  }
+
+  .exp-bubble{
+    width: 80%;
+  }
+
+  .landing{
+    max-height: 60vh;
+    min-height: 40vh;
+
+    margin: 0 auto 0 auto;
+    width: 90%;
+  }
+
+  .landing h3{
+    font-size: 6rem;
+  }
+  
+  
+  .landing-desc{
+    transform: translateY(5rem);
+  }
+  
+  .arrow-button{
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-1rem);
+  }
+  
+  .arrow-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    
+  }
+  
+  .arrow{
+    height: 8vh;
+  }
+  
+  .arrow-text{
+    font-family: "RockSalt";
+    font-size: 0.9rem;
+    color: var(--main-font-color)
+  }
+  
+  .collab-button{
+    transform: translate(-10rem, -6rem);
+  }
+
+  .detail-slide{
+    max-width: 60%;
+  }
+
+  .fashion-img {
+    height: 60vh;
+    flex-basis: 40rem;
+    padding-left: 2rem;
+  }
+  
+}
+
 @media screen and (max-width: 1500px) {
   .hero-img {
     height: 70vh;
@@ -764,6 +850,98 @@ footer{
     height: 65vh;
     object-position: top;
   }
+
+  .landing{
+  min-height: 80vh;
+  margin: 0 auto 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-font-color);
+  background: var(--main-bg-color);
+  /* scroll-snap-align: end; */
+}
+
+
+.landing h3{
+  font-family: "RockSalt";
+  font-size: 5rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.landing-desc{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
+  transform: translateY(2rem);
+}
+
+.about-me{
+  display: flex;
+  width: 10rem;
+  flex-direction: row;
+  margin: 2rem;
+  align-self: flex-end;
+  max-height: 4vh;
+  transform: translateY(-2.5rem);
+}
+
+.about-me-arrow{
+  width: 40%;
+}
+
+.about-me-text{
+  width: 60%;
+  padding-top: 2.1rem;
+  font-family: RockSalt;
+}
+
+.arrow-button{
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-1rem);
+}
+
+.arrow-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  
+}
+
+.arrow{
+  height: 10vh;
+}
+
+.arrow-text{
+  font-family: "RockSalt";
+  font-size: 0.9rem;
+  color: var(--main-font-color)
+}
+
+.collab-button{
+  transform: translateY(-2rem);
+}
+
+.collab-button text{
+  fill: var(--main-bg-color);
+}
+
+#collab{
+  width: 20rem;
+}
 }
 
 /* PHONE SCREEN  */
@@ -794,20 +972,22 @@ footer{
   }
 
   .landing{
-    min-height: 90vh;
+    /* min-height: 90vh; */
+    max-width: 90%;
   }
 
   .landing-desc{
     justify-content: center;
     align-items: center;
+
   }
 
   .landing h3{
-    padding-top: 10vh;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    font-size: 8vw;
+    padding-top:4rem;
+    width: 90%;
+    font-size: 7vw;
     line-height: 4vw;
+    margin: auto;
   }
   
   .collab-button{
@@ -1020,12 +1200,12 @@ footer{
 
   .email-img{
     width: 40%;
-    transform: translate(110%, -80%);
+    transform: translate(125%, -80%);
   
   }
   .github-img{
     width: 37%;
-    transform: translate(140%, -500%);
+    transform: translate(150%, -480%);
   }
 
   .contact br {
