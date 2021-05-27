@@ -308,26 +308,6 @@ body {
   cursor: pointer;
 }
 
-
-
-.email, .github {
-  font-family: RockSalt;
-  position: absolute;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-
-.email img, .github img{
-  cursor:pointer;
-	position: relative;
-}
-
-.github .email{
-  cursor:pointer;
-	position: relative;
-}
-
 .me-n-co{
   padding: 2rem;
 }
@@ -338,54 +318,25 @@ body {
   margin-top: 2rem;
 }
 
-.cv{
+.cv, .email, .github{
   position: absolute;
 }
 
 .cv-img{
-  width: 9rem;
-  transform: translate(20rem, -10rem);
+  width: 8rem;
+  transform: translate(-1rem, -11rem);
 
 }
 
-.email{
-  transform: translate(-10rem, 10rem);
-  width: 15rem;
-  height: 9rem;
-}
-
-.email h3{
-  font-size: 1.5rem;
-  color:var(--main-bg-color);
-  left: 0;
-  position:absolute;
-  text-align:center;
-  top: 32%;
-  width: 100%
-}
-
-
-.github{
-  transform: translate(-250%, 70%);
+.email-img{
   width: 13rem;
-  height: 8rem;
-}
+  transform: translate(20rem, -7rem);
 
-.github h3{
-  font-size: 1.2rem;
-  color:var(--main-font-color);
-  left: 0;
-  position:absolute;
-  text-align:center;
-  top: 30%;
-  width: 100%
 }
-
-.email img,
-.github img{
-  transform: translateX(0%);
+.github-img{
+  width: 10rem;
+  transform: translate(21rem, -28rem);
 }
-
 
 .contact {
   flex-basis: 35rem;
@@ -1058,26 +1009,24 @@ footer{
     display: flex;
   }
 
-  .cv{
+  .cv, .email, .github{
     padding: 0;
   }
+
   .cv-img{
-    width: 5rem;
-    transform: translate(10rem,-5rem);
+    width: 25%;
+    transform: translate(0,-140%);
   }
 
-  /* .email{
-    transform: translate(4rem, 4rem);
+  .email-img{
+    width: 40%;
+    transform: translate(110%, -80%);
+  
   }
-
-  .github{
-    transform: translate(-8rem, -5.5rem);
-    width: 7rem;
+  .github-img{
+    width: 37%;
+    transform: translate(140%, -500%);
   }
-  .github h3{
-    transform: translateY(25%);
-    font-size: 0.8rem;
-  } */
 
   .contact br {
     display: none;
