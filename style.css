@@ -758,8 +758,7 @@ footer{
   }
 
   .landing{
-    max-height: 60vh;
-    min-height: 40vh;
+    height: 88vh;
 
     margin: 0 auto 0 auto;
     width: 90%;
@@ -791,6 +790,10 @@ footer{
     position: relative;
     
   }
+
+  .arrow-desc{
+    transform: translateY(4rem);
+  }
   
   .arrow{
     height: 8vh;
@@ -801,9 +804,25 @@ footer{
     font-size: 0.9rem;
     color: var(--main-font-color)
   }
+
+  #collab{
+    transform: scale(1.325);
+  }
   
   .collab-button{
-    transform: translate(-10rem, -6rem);
+    transform: translate(-10rem, -2rem);
+  }
+
+  .nav-bar{
+    justify-content: center;
+  }
+
+  .me-n-co{
+    transform: translateX(-5rem);
+  }
+
+  .contact{
+    transform: translateX(5rem);
   }
 
   .detail-slide{
