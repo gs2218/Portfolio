@@ -72,8 +72,7 @@ function activeCursor(e) {
   const item = e.target;
   if (window.innerWidth > 1024) {
     if (item.id === "logo" || item.classList.contains("burger") ||
-      item.classList.contains("footer-text") || item.classList.contains("cya-email")
-      || item.classList.contains("skill")) {
+      item.classList.contains("footer-text") || item.classList.contains("cya-email")) {
       mouse.classList.add("nav-active");
     } else {
       mouse.classList.remove("nav-active");
@@ -100,25 +99,25 @@ function activeCursor(e) {
 function navToggle(e) {
   if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
-    gsap.to(".line", 0.5, { stroke: "white" });
+    gsap.to(".line", 0.25, { stroke: "white" });
     if (window.innerWidth < 1024) {
-      gsap.to(".line1", 0.5, { rotate: "45", y: 10, stroke: "white" });
-      gsap.to(".line2", 0.5, { rotate: "-45", x: -4, y: -4, stroke: "white" });
+      gsap.to(".line1", 0.25, { rotate: "45", y: 10, stroke: "white" });
+      gsap.to(".line2", 0.25, { rotate: "-45", x: -4, y: -4, stroke: "white" });
     }
     else {
-      gsap.to(".line1", 0.5, { rotate: "45", y: 12, stroke: "white" });
-      gsap.to(".line2", 0.5, { rotate: "-45", x: 1, y: -7, stroke: "white" });
+      gsap.to(".line1", 0.25, { rotate: "45", y: 12, stroke: "white" });
+      gsap.to(".line2", 0.25, { rotate: "-45", x: 1, y: -7, stroke: "white" });
     }
-    gsap.to("#logo", 1, { color: "white" });
-    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    gsap.to("#logo", 0.5, { color: "white" });
+    gsap.to(".nav-bar", 0.5, { clipPath: "circle(2500px at 100% -10%)" });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
-    gsap.to(".line", 0.5, { stroke: "rgb(5,5,5)" });
-    gsap.to(".line1", 0.5, { rotate: "0", y: 0, stroke: "rgb(5,5,5)" });
-    gsap.to(".line2", 0.5, { rotate: "0", x: 0, y: 0, stroke: "rgb(5,5,5)" });
-    gsap.to("#logo", 1, { color: "rgb(5,5,5)" });
-    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
+    gsap.to(".line", 0.25, { stroke: "rgb(5,5,5)" });
+    gsap.to(".line1", 0.25, { rotate: "0", y: 0, stroke: "rgb(5,5,5)" });
+    gsap.to(".line2", 0.25, { rotate: "0", x: 0, y: 0, stroke: "rgb(5,5,5)" });
+    gsap.to("#logo", 0.5, { color: "rgb(5,5,5)" });
+    gsap.to(".nav-bar", 0.5, { clipPath: "circle(50px at 100% -10%)" });
     document.body.classList.remove("hide");
   }
 }

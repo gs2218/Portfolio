@@ -373,7 +373,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.15s ease-out;
   transition-property: background, transform;
   transform-origin: 75% 75%;
 }
@@ -484,7 +484,6 @@ body.hide {
 }
 
 .date{
-  padding-top: 1rem;
   font-family: RockSalt;
   font-size: 1rem;
   text-align: right;
@@ -500,8 +499,9 @@ body.hide {
 
 .date.seat{
   padding-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   align-self: flex-start;
+
 }
 .abstract.seat{
   padding-left: 2rem;
@@ -536,7 +536,7 @@ body.hide {
 
 .skills-bg{
   width:100%;
-  padding: 1rem;
+  padding: 1.4rem;
   background: var(--main-font-color);
 }
 
@@ -546,7 +546,8 @@ body.hide {
   justify-content: space-around;
   width: 90%;
   margin: auto;
-  font-family: RockSalt;
+  font-family: Raleway;
+  font-size: 1.1rem;
   color: var(--main-bg-color);
 }
 
@@ -557,6 +558,10 @@ body.hide {
 
 .skill{
   padding: 0.5rem 2rem;
+}
+
+.splint.skill:hover{
+  color: var(--purple-highlight-color);
 }
 
 #skill1,
@@ -641,7 +646,7 @@ footer{
   width: 75%;
   margin: auto;
   color: var(--main-font-color);
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   position: relative;
 }
 .fashion-img {
@@ -660,7 +665,7 @@ footer{
   flex: 1;
   position: relative;
   padding-right: 1rem;
-  justify-content: flex-end;
+  align-self: center;
 }
 
 .fashion-text h1 {
@@ -1143,6 +1148,11 @@ footer{
     width: 100%;
     text-align: center;
   }
+  .fashion1,
+  .fashion2,
+  .fashion3{
+    flex-wrap: wrap;
+  }
 
   .fashion-text{
     /* max-height: 40vh; */
@@ -1236,7 +1246,7 @@ footer{
 
 .gallery{
   padding-bottom: 2rem;
-  width: 100%;
+  width: 85%;
   margin: auto;
 }
 
@@ -1259,11 +1269,11 @@ footer{
   -ms-flex: 33%; /* IE10 */
   flex: 33%;
   max-width: 33%;
-  padding: 0 4px;
+  padding: 0 2rem;
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 2rem;
   vertical-align: middle;
   width: 100%;
 }
