@@ -77,7 +77,7 @@ function activeCursor(e) {
     } else {
       mouse.classList.remove("nav-active");
     }
-    if (item.classList.contains("explore") || item.classList.contains("arrow-button")) {
+    if (item.classList.contains("explore") || item.classList.contains("arrow-button") || item.classList.contains("skill")) {
       mouse.classList.add("explore-active");
       gsap.to(".title-swipe", 1, { y: "0%" });
       mouseTxt.innerText = "Tap";
@@ -155,14 +155,14 @@ barba.init({
       leave({ current, next }) {
         let done = this.async();
         //An Animation
-        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-        tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
+        const tl = gsap.timeline({ defaults: { ease: "ease" } });
+        tl.fromTo(current.container, 0.75, { opacity: 1 }, { opacity: 0 });
         tl.fromTo(
           ".swipe",
-          0.75,
+          0.5,
           { x: "-100%" },
           { x: "0%", onComplete: done },
-          "-=0.5"
+          "-=0.25"
         );
       },
       enter({ current, next }) {
@@ -170,10 +170,10 @@ barba.init({
         //Scroll to the top
         window.scrollTo(0, 0);
         //An Animation
-        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        const tl = gsap.timeline({ defaults: { ease: "power" } });
         tl.fromTo(
           ".swipe",
-          1,
+          0.75,
           { x: "0%" },
 
           { x: "100%", stagger: 0.2, onComplete: done }
@@ -181,10 +181,10 @@ barba.init({
         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
         tl.fromTo(
           ".nav-header",
-          1,
+          0.5,
           { y: "-100%" },
-          { y: "0%", ease: "power2.inOut" },
-          "-=1.5"
+          { y: "0%", ease: "power" },
+          "-=0"
         );
       }
     }

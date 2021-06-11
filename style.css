@@ -458,17 +458,36 @@ body.hide {
   transform: translateY(-3rem);
 }
 
+.intro-img-landscape{
+  display: flex;
+  width: 100%;
+}
+
+
+.intro-img{
+  display: flex;
+  justify-content: right;
+  height: 90vh;
+  max-width: 25vw;
+  object-fit: cover;
+  align-items: right;
+}
+
 .proj-title{
   display: flex;
   flex: 40%;
   flex-direction: column;
   font-family: "RockSalt";
-  font-size: 3rem;
-  line-height: 7rem;
+  justify-content: space-between;
   display: flex;
   width: 50%;
   flex-direction: column;
-  padding-left: 2rem;
+  padding: 0 2rem;
+}
+
+.proj-title h1{
+  font-size: 3.5rem;
+  line-height: 7rem;
 }
 
 .proj-desc{
@@ -478,6 +497,7 @@ body.hide {
   justify-content: space-between;
 }
 
+
 .proj-title.seat{
   max-height: 30vw;
   width: 80%;
@@ -485,16 +505,18 @@ body.hide {
 
 .date{
   font-family: RockSalt;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: right;
+  padding-bottom: 5rem;
 
 }
 .abstract{
   font-family: Raleway;
   font-size: 1.5rem;
-  padding-left: 5rem;
-  vertical-align: bottom;
-  align-self: flex-end;
+  text-align: left;
+  width: 80%;
+  line-height: none;
+  padding-bottom: 0.5rem;
 }
 
 .date.seat{
@@ -524,21 +546,11 @@ body.hide {
   justify-content: space-between;
 }
 
-.intro-img{
-  display: flex;
-  justify-content: right;
-  height: 90vh;
-  max-width: 25vw;
-  object-fit: cover;
-  align-items: right;
-}
-
-
-.skills-bg{
+/* .skills-bg{
   width:100%;
   padding: 1.4rem;
   background: var(--main-font-color);
-}
+} */
 
 .skills{
   display: flex;
@@ -548,16 +560,27 @@ body.hide {
   margin: auto;
   font-family: Raleway;
   font-size: 1.1rem;
-  color: var(--main-bg-color);
+  padding-right: 5rem;
 }
 
 .skills a{
   text-decoration: none;
-  color: var(--main-bg-color);
+  color: var(--main-font-color);
+  padding-bottom: 0.5rem;
 }
 
-.skill{
-  padding: 0.5rem 2rem;
+.skill-wrap{
+  transform: translateY(4.4rem);
+}
+
+.offshoot{
+  max-height: 5vh;
+}
+
+.skills-arrow{
+  width: 90%;
+  margin: auto;
+  display: flex;
 }
 
 .splint.skill:hover{
