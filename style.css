@@ -467,8 +467,8 @@ body.hide {
 .intro-img{
   display: flex;
   justify-content: right;
-  height: 90vh;
-  max-width: 25vw;
+  height: 95vh;
+  max-width: 30vw;
   object-fit: cover;
   align-items: right;
 }
@@ -547,6 +547,11 @@ body.hide {
   justify-content: space-between;
 }
 
+.intro-proj.seat{
+  padding-right: 2rem;
+}
+
+
 /* .skills-bg{
   width:100%;
   padding: 1.4rem;
@@ -583,10 +588,6 @@ body.hide {
   width: 90%;
   margin: auto;
   display: flex;
-}
-
-.splint.skill:hover{
-  color: var(--purple-highlight-color);
 }
 
 #skill1,
