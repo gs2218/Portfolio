@@ -566,7 +566,7 @@ body.hide {
 
 .skills a{
   text-decoration: none;
-  color: var(--orange-highlight-color);
+  color: var(--main-font-color);
   padding-bottom: 0.5rem;
 }
 
@@ -585,9 +585,9 @@ body.hide {
   display: flex;
 }
 
-/* .splint.skill:hover{
+.splint.skill:hover{
   color: var(--purple-highlight-color);
-} */
+}
 
 #skill1,
 #skill2,
