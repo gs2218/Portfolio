@@ -493,6 +493,7 @@ body.hide {
 .proj-desc{
   display: flex;
   flex: 40%;
+  padding-left: 2rem;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -512,7 +513,7 @@ body.hide {
 }
 .abstract{
   font-family: Raleway;
-  font-size: 1.5rem;
+  font-size: 1.325rem;
   text-align: left;
   width: 80%;
   line-height: none;
@@ -565,12 +566,13 @@ body.hide {
 
 .skills a{
   text-decoration: none;
-  color: var(--main-font-color);
+  color: var(--orange-highlight-color);
   padding-bottom: 0.5rem;
 }
 
 .skill-wrap{
   transform: translateY(4.4rem);
+  text-align: center;
 }
 
 .offshoot{
@@ -583,9 +585,9 @@ body.hide {
   display: flex;
 }
 
-.splint.skill:hover{
+/* .splint.skill:hover{
   color: var(--purple-highlight-color);
-}
+} */
 
 #skill1,
 #skill2,
