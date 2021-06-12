@@ -21,17 +21,17 @@ function animateSlides() {
     const slideTl = gsap.timeline({
       defaults: { duration: 1, ease: "Power3.easeOut" }
     });
-    slideTl.fromTo(img, 1.6, { width: "100%", translateY: "101%" }, { width: "100%", translateY: "0%" });
-    slideTl.fromTo(title, 0.6, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.2);
-    slideTl.fromTo(heroDescP, 0.8, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.4);
-    slideTl.fromTo(exp, 1, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.6);
+    slideTl.fromTo(img, 1.2, { width: "100%", translateY: "101%" }, { width: "100%", translateY: "0%" });
+    slideTl.fromTo(title, 0.45, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.15);
+    slideTl.fromTo(heroDescP, 0.6, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.3);
+    slideTl.fromTo(exp, 0.75, { opacity: 0, translateY: "100%" }, { opacity: 1, translateY: "0%" }, 0.45);
 
 
     //Create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
       triggerHook: 0.7,
-      // reverse: false
+      reverse: false
     })
       .setTween(slideTl)
       // .addIndicators({
@@ -86,13 +86,6 @@ function activeCursor(e) {
       mouseTxt.innerText = "";
       gsap.to(".title-swipe", 1, { y: "100%" });
     }
-    // if (item.classList.contains("skill")) {
-    //   mouse.classList.add("skill-active");
-    //   gsap.to(".title-swipe", 1, { y: "0%" });
-    //   mouseTxt.innerText = "Tap";
-    // } else {
-    //   mouse.classList.remove("skill-active");
-    // }
   }
 }
 
@@ -156,13 +149,13 @@ barba.init({
         let done = this.async();
         //An Animation
         const tl = gsap.timeline({ defaults: { ease: "ease" } });
-        tl.fromTo(current.container, 0.75, { opacity: 1 }, { opacity: 0 });
+        tl.fromTo(current.container, 0.25, { opacity: 1 }, { opacity: 0 });
         tl.fromTo(
           ".swipe",
-          0.5,
+          0.4,
           { x: "-100%" },
           { x: "0%", onComplete: done },
-          "-=0.25"
+          "-=0.15"
         );
       },
       enter({ current, next }) {
@@ -173,18 +166,16 @@ barba.init({
         const tl = gsap.timeline({ defaults: { ease: "power" } });
         tl.fromTo(
           ".swipe",
-          0.75,
+          0.5,
           { x: "0%" },
-
-          { x: "100%", stagger: 0.2, onComplete: done }
+          { x: "100%", stagger: 0.18, onComplete: done }
         );
-        tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
+        tl.fromTo(next.container, 0.4, { opacity: 0 }, { opacity: 1 });
         tl.fromTo(
           ".nav-header",
-          0.5,
+          0.3,
           { y: "-100%" },
-          { y: "0%", ease: "power" },
-          "-=0"
+          { y: "0%", ease: "power" }
         );
       }
     }

@@ -198,6 +198,11 @@ body {
   padding-left: 3rem;
   position: relative;
 }
+
+.bold{
+  font-weight: 1000;
+}
+
 .hero-img {
   position: relative;
   flex: 1;
@@ -283,6 +288,8 @@ body {
 
 .cya-email{
   cursor: pointer;
+  text-decoration: none;
+  color: var(--main-bg-color);
 }
 
 .nav-bar {
@@ -378,11 +385,11 @@ body {
   transform-origin: 75% 75%;
 }
 .cursor.nav-active {
-  background: var(--orange-highlight-color);
+  background: var(--main-bg-color);
   transform: scale(2.5);
 }
-.cursor.footer-text-active {
-  background: var(--orange-highlight-color);
+.cursor.footer-active {
+  background: var(--main-bg-color);
   transform: scale(2.5);
 }
 .cursor.explore-active {
@@ -609,6 +616,8 @@ body.hide {
   text-decoration: none;
   color: var(--main-bg-color);
   transform: translateY(-1.5rem);
+  z-index: 2;
+
 }
 
 
@@ -621,6 +630,8 @@ footer{
   justify-content: center;
   padding-top: 2rem;
   transform: translateY(2rem);
+  z-index: 2;
+
 }
 
 .vid{
@@ -691,16 +702,16 @@ footer{
   flex: 1;
   position: relative;
   padding-right: 1rem;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .fashion-text h1 {
-  padding-top: 5rem;
   font-family: "RockSalt";
+  padding-top: 3rem;
 }
 
 .fashion-text p {
-  padding: 2rem 0rem;
+  padding-top: 2rem;
 }
 
 .swipe {
@@ -727,24 +738,6 @@ footer{
 .making-process{
   transform: translateY(-5rem)
 }
-
-/* .making-process img{
-  width: 90%;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  margin: auto;
-  display: flex;
-  align-self: center;
-}
-
-.making-process h2{
-  font-family: RockSalt;
-  font-size: 2rem;
-  padding-left: 4rem;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  padding: 2rem;
-} */
 
 .disclaimer{
   font-size: 1.3rem;
@@ -865,7 +858,60 @@ footer{
     flex-basis: 40rem;
     padding-left: 2rem;
   }
+
+  .intro.proj{
+    width: 80%;
+  }
   
+  .proj-title h1{
+    font-size: 5rem;
+    line-height: 10rem;
+  }
+
+  .abstract{
+    font-size: 160%;
+  }
+
+  
+  .skills{
+    width: 80%;
+    font-size: 160%;
+    padding-right: 8rem;
+  }
+
+  .skills a{
+    text-decoration: none;
+    color: var(--main-font-color);
+    padding-bottom: 0.5rem;
+  }
+
+  .skill-wrap{
+    transform: translateY(6rem);
+  }
+
+
+  .skills-arrow{
+    width: 80%;
+  }
+
+  .detail-slide{
+    width: 50%;
+  }
+
+  .fashion-img{
+    height: 45vh;
+    flex-basis: 30rem;
+  }
+
+  .fashion-text h1{
+    font-size: 200%;
+  }
+
+  .fashion-text p{
+    font-size: 150%;
+  }
+
+
 }
 
 @media screen and (max-width: 1500px) {
