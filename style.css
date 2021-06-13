@@ -583,8 +583,13 @@ body.hide {
 }
 
 .skill-wrap{
-  transform: translateY(4.4rem);
+  transform: translateY(75%);
   text-align: center;
+}
+
+.offshoot-bubble{
+  height: 13vh;
+  
 }
 
 .offshoot{
@@ -616,7 +621,7 @@ body.hide {
   text-decoration: none;
   color: var(--main-bg-color);
   transform: translateY(-1.5rem);
-  z-index: 2;
+  z-index: 22;
 
 }
 
