@@ -1048,6 +1048,18 @@ footer{
 /* PHONE SCREEN  */
 @media screen and (max-width: 1024px) {
 
+  .skills-bg{
+    display: none;
+  }
+
+  .skill{
+    display: none;
+  }
+
+  .skill.offshoot-bubble svg{
+    display: none;
+  }
+
   main {
     width: 100%;
     overflow-x: hidden;
@@ -1080,7 +1092,6 @@ footer{
   .landing-desc{
     justify-content: center;
     align-items: center;
-
   }
 
   .landing h3{
