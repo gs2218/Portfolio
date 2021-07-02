@@ -23,7 +23,7 @@ html {
     --purple-highlight-color: rgb(109, 58, 204);
     --orange-highlight-color: rgb(216, 79, 25);
     --blue-highlight-color: rgb(94, 204, 212);
-    --green-highlight-color: rgb(124, 212, 148);
+    --green-highlight-color: rgb(82, 185, 159);
 }
 
 body {
@@ -583,13 +583,16 @@ body.hide {
 }
 
 .skill-wrap{
-  transform: translateY(75%);
+  transform: translateY(70%);
   text-align: center;
 }
 
 .offshoot-bubble{
   height: 13vh;
-  
+}
+
+.offshoot-bubble.ip{
+  height: 15vh;
 }
 
 .offshoot{
@@ -838,12 +841,12 @@ footer{
   }
   
   .arrow{
-    height: 8vh;
+    height: 10vh;
   }
   
   .arrow-text{
     font-family: "RockSalt";
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--main-font-color)
   }
 
@@ -852,7 +855,7 @@ footer{
   }
   
   .collab-button{
-    transform: translate(-10rem, -2rem);
+    transform: translate(-15rem, -2rem);
   }
 
   .nav-bar{
@@ -929,7 +932,13 @@ footer{
     font-size: 150%;
   }
 
+  .skill-wrap{
+    transform: translateY(67%);
+  }
 
+  .future{
+    width: 70vw;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -1057,6 +1066,7 @@ footer{
   width: 20rem;
 }
 }
+
 
 /* PHONE SCREEN  */
 @media screen and (max-width: 1024px) {

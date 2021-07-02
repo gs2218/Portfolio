@@ -102,7 +102,7 @@ function navToggle(e) {
       gsap.to(".line2", 0.25, { rotate: "-45", x: 1, y: -7, stroke: "white" });
     }
     gsap.to("#logo", 0.5, { color: "white" });
-    gsap.to(".nav-bar", 0.5, { clipPath: "circle(2500px at 100% -10%)" });
+    gsap.to(".nav-bar", 0.5, { clipPath: "circle(3000px at 100% -10%)" });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
