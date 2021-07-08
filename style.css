@@ -24,6 +24,7 @@ html {
     --orange-highlight-color: rgb(216, 79, 25);
     --blue-highlight-color: rgb(94, 204, 212);
     --green-highlight-color: rgb(82, 185, 159);
+    --red-highlight-color: rgb(233,64,71);
 }
 
 body {
@@ -31,8 +32,6 @@ body {
   font-family: "Raleway";
   overflow-x: hidden;
   position: relative;
-  /* scroll-snap-type: y mandatory; */
-  /* overflow-y: scroll; */
 }
 
 #logo {
@@ -247,6 +246,10 @@ body {
 }
 .gizmo-span{
   color: var(--green-highlight-color);
+}
+
+.noweigh-span{
+  color: var(--red-highlight-color);
 }
 
 .explore {
@@ -595,6 +598,10 @@ body.hide {
   height: 15vh;
 }
 
+.offshoot-bubble.maxi{
+  height: 17vh;
+}
+
 .offshoot{
   max-height: 5vh;
 }
@@ -730,6 +737,19 @@ footer{
 }
 
 .future img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.oxo-slide{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.oxo-slide img{
   width: 100%;
   height: 100%;
   object-fit: cover;
