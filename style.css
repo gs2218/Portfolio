@@ -25,6 +25,9 @@ html {
   --blue-highlight-color: rgb(94, 204, 212);
   --green-highlight-color: rgb(82, 185, 159);
   --red-highlight-color: rgb(233, 64, 71);
+  --light-purple: rgb(211, 186, 248);
+  --light-blue: rgb(196, 234, 251);
+  --dark-blue: #4141af;
 }
 
 body {
@@ -240,6 +243,10 @@ body {
   color: var(--blue-highlight-color);
 }
 
+.pain-diary-span{
+  color: var(--dark-blue);
+}
+
 .mountain-span {
   color: var(--purple-highlight-color);
 }
@@ -296,6 +303,7 @@ body {
 .cya-email {
   cursor: pointer;
   text-decoration: none;
+  z-index: 1000;
   color: var(--main-bg-color);
 }
 
@@ -471,6 +479,11 @@ body.hide {
   transform: translateY(-7rem);
 }
 
+.cover-photo.hold{
+  transform: translateY(-2rem);
+  margin-bottom: 4vh;
+}
+
 .intro.proj {
   margin: 0 auto 0 auto;
   width: 90%;
@@ -493,6 +506,10 @@ body.hide {
   max-width: 30vw;
   object-fit: cover;
   align-items: right;
+}
+
+.intro-img.phone-in-hand {
+  margin: 0rem 4rem; 
 }
 
 .proj-title {
@@ -751,10 +768,24 @@ footer {
   padding-bottom: 2rem;
 }
 
+.future.col{
+  flex-direction: column;
+}
+
+.future.col h2{
+  font-size: 2rem;
+  font-family: RockSalt;
+  width: 30vw;
+}
+
 .future img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.future.col img{
+  padding: 3rem 18rem;
 }
 
 .oxo-slide {
@@ -923,6 +954,10 @@ footer {
   .intro.proj {
     width: 80%;
   }
+
+  
+
+
 
   .proj-title h1 {
     font-size: 5rem;
@@ -1111,6 +1146,49 @@ footer {
 
 /* PHONE SCREEN  */
 @media screen and (max-width: 1024px) {
+
+  .intro-seat{
+    min-height: 70vh;
+    justify-content: space-around;
+  }
+
+  .cover-photo.hold{
+    padding-bottom: 0;
+  }
+
+  .future.col h2{
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .future.col img{
+    padding: 2rem;
+  }
+
+  .intro-text.seat {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 1rem;
+    transform: translateY(-3rem);
+  }
+
+  .date.seat{
+    display: flex;
+    transform: translateY(4rem);
+  }
+
+  .abstract.seat{
+    width: 100%;
+    padding: 0;
+  }
+
+  .abstract.seat p{
+    transform: translatey(4rem);
+  }
 
   .skills-bg {
     display: none;
@@ -1404,6 +1482,10 @@ footer {
   }
 
   .contact br {
+    display: none;
+  }
+
+  .intro-img{
     display: none;
   }
 }
