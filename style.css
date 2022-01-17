@@ -687,6 +687,12 @@ footer {
   padding-bottom: 2rem;
 }
 
+.slide-deck{
+  color: black!important;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 .poster {
   width: 75%;
   margin: auto;
